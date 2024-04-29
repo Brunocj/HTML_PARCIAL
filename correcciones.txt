@@ -1,0 +1,33 @@
+VECINO
+cambiar el "+" en incidencias por un ojito
+eliminar la linea horizontal que separa los datos de la imagen
+GENERAL:
+Cambiar cancel por cancelar
+Completar los linkeos (el qa no chambea bien hay que bajarle el sueldo)
+los elementos clickeables tienen que cambiar el cursor
+cambiar notificaciones por correo
+añadir calendario en los campos que se tengan que llenar fechas
+COORDINADOR:
+Que el ingreso de vacantes solo acepte numeros
+que el calendario no mueva el texto
+Cambiar la ubicacion del lapiz de edicion en algunos campos
+en editar evento, cambiar profesores por algo con más sentido
+cambiar lo de vacantes (se ve como boton)
+
+SERENAZGO:
+filtro del dashboard, en la primera gráfica tiene que indicar que dia, mes y semana se encuentra al seleccionar la opcion respectiva
+algunos botones no tienen el color que deberian
+juntar autoridad con ultima pantalla de concluir incidencia
+Poner motivo al eliminar la incidencia
+crear submenus para las incidencias porque se ve feo :C
+
+
+ADMIN:
+cambiar el dashboard de acuerdo a serenazgo
+filtro de serenazgo, tiene que decir "Filtrar por turnos"
+Columna de deporte/cultura en la tabla de profesores
+cambiar titulo de correo por asunto de correo- vecino infosoli
+Filtrar por area, en el filtro de la tabla de coordinador
+cambiar read-only por disable en los inputs de las solicitudes (brandon chambea)
+cambiar PROFESORESSSSSSSSSSSS del menu principal
+borde blanco de los botones NO
