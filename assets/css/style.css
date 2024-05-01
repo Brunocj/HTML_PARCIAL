@@ -20735,7 +20735,7 @@ div.tagsinput {
           margin-right: auto;
           margin-left: 1rem; }
       .sidebar .nav .nav-item.active > .nav-link {
-        background: #0f1015;
+        background: rgba(255, 255, 255, 0.1); /* COMENTARIO: Item activo del sidebar*/
         position: relative; }
         .sidebar .nav .nav-item.active > .nav-link:before {
           content: "";

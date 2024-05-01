@@ -24,14 +24,17 @@
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;"> <!--Cambiar al color mas oscuro-->
-          <h3>Menú de navegación</h3>
-
+        
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
+          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px;">Menú</h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px;">M</h3>
         </div>
+        
+        
         <ul class="nav">
           
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-          <li class="nav-item menu-items">
+          <li class="nav-item menu-items active"> <!-- la clase "active" solo se usa para la vista que está activa -->
             
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
