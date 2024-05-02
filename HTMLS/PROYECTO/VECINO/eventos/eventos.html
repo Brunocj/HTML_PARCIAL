@@ -5,6 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Eventos</title>
+    <style>
+      /* Estilos CSS para los mensajes de alerta */
+      .swal2-content,
+      .swal2-title {
+          color: black !important; /* Hacer el texto visible */
+      }
+      
+        /* Estilos para el título y contenido personalizado del popup de alerta */
+        .swal-custom-title,
+        .swal-custom-content {
+          color: black; /* Color del texto */
+          font-size: 18px; /* Tamaño de fuente */
+          margin-bottom: 10px; /* Espacio inferior */
+      }
+
+      .event-image-container {
+  max-width: 100%; /* Ajusta el tamaño máximo del contenedor de la imagen */
+  overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+}
+
+.event-image {
+  width: 80%; /* Ajusta la anchura de la imagen al 100% del contenedor */
+  height: auto; /* Mantén la proporción de la imagen */
+  display: block; /* Evita espacios en blanco debajo de la imagen */
+}
+    </style>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../../assets/vendors/css/vendor.bundle.base.css">
@@ -26,6 +52,7 @@
       <!-- partial:../../partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #225496;">  <!--Cambiar al color mas oscuro-->
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #225496;">
+          <h3>Menú de navegación</h3>
         </div>
         <ul class="nav">
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
@@ -148,13 +175,13 @@
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-md-4">
-                    <a href="miseventos.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #225496;">Mis Eventos</a>
+                    <a href="mis_eventos.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #225496;">Mis Eventos</a>
                   </div>
                   <div class="col-md-4">
-                    <a href="eventos.html" class="btn btn-primary btn-lg d-block mb-3 topBtn" style ="background-color: #183d6c;">Eventos</a> <!--Cambiar el color de acuerdo al que este seleccionado (el codigo de color de estalinea es el que se debe usar para cuando se encuentra una pestaña seleccionada; en coordinador, usar otro color, pero que sea más oscuro)-->
+                    <a href="#" class="btn btn-primary btn-lg d-block mb-3 topBtn" style ="background-color: #183d6c;">Eventos</a> <!--Cambiar el color de acuerdo al que este seleccionado (el codigo de color de estalinea es el que se debe usar para cuando se encuentra una pestaña seleccionada; en coordinador, usar otro color, pero que sea más oscuro)-->
                   </div>
                   <div class="col-md-4">
-                    <a href="eventospasados.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #225496;">Eventos Pasados</a>
+                    <a href="eventos_pasados.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #225496;">Eventos Pasados</a>
                   </div>
                 </div>
               </div>
@@ -171,7 +198,7 @@
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <!-- Botón en la parte inferior derecha -->
-                        <a href ="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href ="detalles_evento.html?eventId=1" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>                      
                       </div>
                     </div>
                   </div>
@@ -184,33 +211,31 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href ="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href ="detalles_evento.html?eventId=2" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="cardEvent" data-event-id="3">
-                      
                       <img src="fotos/foto1.png" class="card-img-top" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href ="detalles_evento.html?eventId=3" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="cardEvent" data-event-id="4">
-                      
                       <img src="fotos/foto1.png" class="card-img-top" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href ="detalles_evento.html?eventId=4" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -229,7 +254,7 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=5" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -242,7 +267,7 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=6" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -255,7 +280,7 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=7" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -268,7 +293,7 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=8" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -280,14 +305,13 @@
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                   <div class="col">
                     <div class="cardEvent" data-event-id="9">
-                     
                       <img src="fotos/foto3.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=9" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -300,7 +324,7 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=10" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -313,7 +337,7 @@
                           <h5 class="card-title">Título de la Tarjeta</h5>
                         </div>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
+                        <a href="detalles_evento.html?eventId=11" class="btn btn-primary btn-sm btn-bottom-right">Ver evento</a>
                       </div>
                     </div>
                   </div>
@@ -359,12 +383,12 @@
     <!-- Custom js for this page -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script src = "script_eventos.js"></script>
     
     <!-- End custom js for this page -->
   </body>
 </html>
-
 
 
 
