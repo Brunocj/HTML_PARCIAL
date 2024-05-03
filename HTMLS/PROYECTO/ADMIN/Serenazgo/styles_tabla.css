@@ -146,3 +146,9 @@
   background-color: #193255; /* Cambiar al color rojo deseado */
   color: white; /* Cambiar el color del texto a blanco o cualquier otro color que contraste */
 }
+
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title.vecinos,
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse,
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {
+  width: 250px !important;
+}
