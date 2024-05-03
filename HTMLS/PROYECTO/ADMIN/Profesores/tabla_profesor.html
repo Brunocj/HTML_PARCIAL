@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Pagina en blanco</title>
+    <title>Lista de profesores</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="styles_tabla.css">
     <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
@@ -17,7 +17,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../../assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../LogoSM.png" /> <!--Cambiar la ubicacion del logo de la pagina aca tmb-->
+    <link rel="shortcut icon" href="../../LogoSM.png" /> <!--Cambiar la ubicacion del logo de la pagina aca tmb-->
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
@@ -77,7 +77,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-nature-people"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
-              <span class="menu-title" style="color: white;">Vecinos</span>
+              <span class="menu-title vecinos" style="color: white;">Vecinos</span>
               <i class="menu-arrow" style="color: white;"></i> 
             </a>
             
@@ -174,20 +174,19 @@
                         Limpiar Filtros
                         <a class="mdi mdi-filter-remove" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
                       </button> 
-                  </div>
-                  <div style="display: flex; align-items: center; justify-content: center;">
-                    <button id="limpiarFiltros" class="btnTable" style="display: flex; align-items: center;" onclick="window.location.href='profesorRegistro.html'">
-                      Agregar Docente
-                      <a class="mdi mdi-account-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
-                    </button>
-                  </div>
-                  
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                      <button  class="btnTable" style="display: flex; align-items: center;">
+                        Agregar Docente
+                        <a class="mdi mdi-account-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
+                      </button>
+                    </div>
                   </div>    
                 </div>
               </div>
             </div>
             <table id="miTabla" class="table" style="margin-bottom:15px;">
-              <thead style="background-color: #e0e9ff;"> <!--Cambiar al color de fondo de la pagina, pero un poco mas oscuro-->
+              <thead style="background-color: #ff8e9f;"> <!--Cambiar al color de fondo de la pagina, pero un poco mas oscuro-->
                 <tr style="text-align: center; font-weight:800;">
                   <th style ="color: white;font-size: 17px;cursor: pointer;">Apellidos</th>
                   <th style ="color: white;font-size: 17px;cursor: pointer;">Nombres</th>

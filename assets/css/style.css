@@ -20907,7 +20907,7 @@ div.tagsinput {
           .sidebar .nav.sub-menu .nav-item .nav-link:hover {
             color: #ffffff; }
         .sidebar .nav.sub-menu .nav-item:hover {
-          background: rgba(255, 255, 255, 0.1); }
+          background: rgba(255, 255, 255, 0.1); } 
     .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-category):not(.account-dropdown) > .nav-link {
       background: rgba(255, 255, 255, 0.1); /*COMENTARIO: Cambiar color al pasar el mouse por los items de la lista*/
       color: #ffffff; }

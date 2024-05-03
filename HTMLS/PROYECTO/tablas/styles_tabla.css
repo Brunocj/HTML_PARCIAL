@@ -68,13 +68,20 @@
     cursor: default; /* Mantiene el cursor predeterminado */
 }
 .paginate_button{
+    flex-direction: row;
     padding:8px;
     background: #000f22;
-    color: white;
+    margin-right: 10px;
+    margin-left:10px;
     border-radius: 5px;
     color: inherit; /* Mantiene el color del texto heredado */
     text-decoration: none; /* Elimina la subrayado por defecto */
     cursor: default; /* Mantiene el cursor predeterminado */
+}
+
+.paginate_button.current{
+    background: #193255;
+
 }
 
 #miTabla_paginate:hover {

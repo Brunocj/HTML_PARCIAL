@@ -165,13 +165,18 @@
                         <option value="Noche">Noche</option>
                       </select>
                     </div>
-                    <button id="limpiarFiltros" class ="btnTable">Limpiar Filtros</button>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                      <button class="btnTable" style="display: flex; align-items: center;">
+                        Agregar Docente/Incidencia
+                        <a class="mdi mdi-account-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
+                      </button>
+                    </div>
                   </div>    
                 </div>
               </div>
             </div>
             <table id="miTabla" class="table" style="margin-bottom:15px;">
-              <thead style="background-color: #e0e9ff;"> <!--Cambiar al color de fondo de la pagina, pero un poco mas oscuro-->
+              <thead style="background-color: #e0e9ff;"> <!--Cambiar al color de fondo (claro) de la pagina, pero un poco mas oscuro-->
                 <tr style="text-align: center; font-weight:800;">
                   <th>Apellidos</th>
                   <th>Nombres</th>
@@ -217,9 +222,7 @@
               </tbody>
           </table>
 
-          <div class ="container-boton">
-            <a href="agregarIncidencia.html"><button class="btnTable" style="margin-top: 20px;">Registrar incidencia</button></a>
-          </div>
+
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <!-- partial -->
