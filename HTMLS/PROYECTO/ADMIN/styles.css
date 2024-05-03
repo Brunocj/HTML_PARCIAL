@@ -60,3 +60,8 @@
     width: 100%;
     max-width: 300px;
 }
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title.vecinos,
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse,
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {
+  width: 250px !important;
+}
