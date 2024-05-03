@@ -48,22 +48,22 @@
 
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../dashboar.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
               <span class="menu-title" style="color: white;">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item menu-items active">
-            <a class="nav-link" href="tabla_serenazgo.html">
+          <li class="nav-item menu-items ">
+            <a class="nav-link" href="../Serenazgo/tabla_serenazgo.html">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
               </span>
               <span class="menu-title" style="color: white;">Serenazgo</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          <li class="nav-item menu-items active">
             <a class="nav-link" href="../Profesores/tabla_profesor.html">
               <span class="menu-icon">
                 <i class="mdi mdi-teach"></i>
@@ -146,40 +146,43 @@
         <!-- partial -->
         <div class="main-panel">
           <div >
-            <div class="content-wrapper" style ="background-color: #FFEBEE;"> <!--Cambiar al color mas claro-->
+            <div class="content-wrapper" style ="background-color: #FFEBEE; margin-top:auto;"> <!--Cambiar al color mas claro-->
             <!--CONTENIDO-->
             <div style="display: flex; justify-content: space-between;">
               <div style="display: flex; justify-content: space-between;">
                 <div style="display: flex; flex-direction: column; ">
-                  <h2 class="tabla-title" style ="color:#000f22;">Personal de Serenazgo</h2>  <!--Cambiar el titulo de la tabla-->
+                  <h2 class="tabla-title" style ="color:#000f22;">Lista de Profesores</h2>  <!--Cambiar el titulo de la tabla-->
                     
                   <div style="display: flex; gap:30px;margin-top: 10px;">
  
                     <div style="display: flex; gap:10px;">
 
-                      <p style ="color:black; align-self: center; margin-bottom: 0px;font-size: 15px">Filtrar por turno :</p>
+                      <p style ="color:black; align-self: center; margin-bottom: 0px;font-size: 15px">Filtrar por curso :</p>
                       <select id="filtroEstado" style="border-color: #DFDFDF; border-radius: 6px; padding:5px; outline: none; height: 40px; margin-top: 10px;" >
                         <option value="">Mostrar Todos</option> <!--Cambiar el filtro de acuerdo a lo necesario-->
-                        <option value="Mañana">Mañana</option>
-                        <option value="Tarde">Tarde</option>
-                        <option value="Noche">Noche</option>
+                        <option value="Futbol">Futbol</option>
+                        <option value="Natacion">Natacion</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Propa">Propa</option>
+                        <option value="Ajedrez">Ajedrez</option>
+                        <option value="Ondas">Ondas</option>
+
                       </select>
                     </div>
                     <div style="display: flex; align-items: center; justify-content: center;">
-                        <button id="limpiarFiltros" class="btnTable" style="display: flex; align-items: center;">
-                          Limpiar Filtros
-                          <a class="mdi mdi-filter-remove" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
-                        </button> 
-                    </div>
-                    <div style="display: flex; align-items: center; justify-content: center;">
-                      <button id="limpiarFiltros" class="btnTable" style="display: flex; align-items: center;" onclick="window.location.href='serenazgoRegistro.html'">
-                        Agregar Personal
-                        <a class="mdi mdi-account-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
-                      </button>
-                    </div>
-                      
-                    
-                  </div>   
+                      <button id="limpiarFiltros" class="btnTable" style="display: flex; align-items: center;">
+                        Limpiar Filtros
+                        <a class="mdi mdi-filter-remove" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
+                      </button> 
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: center;">
+                    <button id="limpiarFiltros" class="btnTable" style="display: flex; align-items: center;" onclick="window.location.href='profesorRegistro.html'">
+                      Agregar Docente
+                      <a class="mdi mdi-account-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
+                    </button>
+                  </div>
+                  
+                  </div>    
                 </div>
               </div>
             </div>
@@ -188,97 +191,85 @@
                 <tr style="text-align: center; font-weight:800;">
                   <th style ="color: white;font-size: 17px;cursor: pointer;">Apellidos</th>
                   <th style ="color: white;font-size: 17px;cursor: pointer;">Nombres</th>
-                  <th style ="color: white;font-size: 17px;cursor: pointer;">Turno</th>
+                  <th style ="color: white;font-size: 17px;cursor: pointer;">Curso</th>
                   <th style="width: 20px;color: white"></th>
                   <th style="width: 20px;color: white"></th>
-                  <th style="width: 20px;color: white"></th>
-                 
                 </tr>
               </thead>
               <tbody style="text-align: center;color: black;">
                 <tr style="text-align: center;">
                   <td><a>Yarleque Medina</a></td>
                   <td><a>Manuel Augusto</a></td>
-                  <td>Mañana</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Propa</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>López Pascual</a></td>
                   <td><a>Adrián Alvaro</a></td>
-                  <td>Tarde</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Ajedrez</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Coronado Maxwell</a></td>
                   <td><a>Jorge</a></td>
-                  <td>Noche</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Ondas</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td ><a>Bustamante Melo</a></td>
                   <td><a>Pedro Miguel</a></td>
-                  <td>Mañana</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Ajedrez</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Yarleque Medina</a></td>
                   <td><a>Manuel Augusto</a></td>
-                  <td>Tarde</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Futbol</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Yarleque Medina</a></td>
                   <td><a>Manuel Augusto</a></td>
-                  <td>Noche</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Natacion</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Galarga Melo</a></td>
                   <td><a>Elver Augusto</a></td>
-                  <td>Mañana</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Futbol</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Calderon Rodriguez</a></td>
                   <td><a>José Ricardo</a></td>
-                  <td>Tarde</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Yoga</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>garay Cruz</a></td>
                   <td><a>Eduardo Daniel</a></td>
-                  <td>Noche</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Ajedrez</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Coronado Maxwell</a></td>
                   <td><a>Jorge</a></td>
-                  <td>Noche</td>
-                  <td><a href ="datosSerenazgo.html" class ="mdi mdi-eye" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="editarSerenazgo.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293; font-size: 20px;"></a></td>
-                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293; font-size: 20px;"></a></td>
+                  <td>Propa</td>
+                  <td><a href ="editarProfesor.html" class ="mdi mdi-lead-pencil" style ="color: #6c7293;font-size: 20px;"></a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;font-size: 20px;"></a></td>
                 </tr>
               </tbody>
           </table>
-          <div id="contadorTurnos"></div>
+          
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <!-- partial -->
