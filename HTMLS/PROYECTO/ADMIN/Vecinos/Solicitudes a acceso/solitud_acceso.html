@@ -38,7 +38,7 @@
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="../pag_blanco_admin.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../../pag_blanco_admin.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -56,7 +56,7 @@
               <span class="menu-title" style="color: white;">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item menu-items active">
+          <li class="nav-item menu-items ">
             <a class="nav-link" href="tabla_serenazgo.html">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
@@ -65,7 +65,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../Profesores/tabla_profesor.html">
+            <a class="nav-link" href="../../Profesores/tabla_profesor.html">
               <span class="menu-icon">
                 <i class="mdi mdi-teach"></i>
               </span>
@@ -85,16 +85,16 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
                 
-                <li class="nav-item"> <a class="nav-link" href="../Vecinos/Solicitudes a acceso/tabla_solicitudes.html" style="color: white;">
+                <li class="nav-item active"> <a class="nav-link" href="../../Vecinos/Solicitudes a acceso/tabla_solicitudes.html" style="color: white;">
                   <span class="menu-icon">
                     <i class="mdi mdi-account-alert"></i>
                   </span>
-                  Solicitudes de acceso</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
-                  <span class="menu-icon">
-                    <i class="mdi mdi-account-alert"></i>
+                  Sol. de acceso</a></li>
+                <li class="nav-item"> <a class="nav-link " href="../../Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
+                  <span class="menu-icon ">
+                    <i class="mdi mdi-account-alert active"></i>
                   </span>
-                  Solicitudes a coordinación</a></li>
+                  Sol. a coordinación</a></li>
               </ul>
             </div>
           </li>
@@ -153,7 +153,7 @@
                 <div class = "wrapper"id="formContent">
                   <!-- Tabs Titles -->
                   <h2 style="margin-top: 0; margin-bottom: 20px; text-align: left;font-size: 30px;">Solicitud de acceso</h2>
-                  <a href="tabla_serenazgo.html" class="button">Regresar</a>
+                  <a href="tabla_solicitudes.html" class="button">Regresar</a>
                   <hr style="border: none; border-top: 2px solid black;">
                   <!-- Icon -->
               
@@ -200,7 +200,7 @@
                       <input type="text" id="asunto">
 
                       <label for="cuerpo">Cuerpo del correo:</label>
-                      <textarea type="text" id="cuerpo" style="overflow-y: auto; height:180px; border-color:#c8c8c8; border-radius:5px;"></textarea>
+                      <textarea type="text" id="cuerpo" style="overflow-y: auto; height:180px; border-color:#c8c8c8; border-radius:5px; padding:11px;"></textarea>
 
 
                     </div>
@@ -255,52 +255,8 @@
             }
         });
     }
-
-    function Cancelar(){
-            window.location.href = "tabla_serenazgo.html";
-            return false;
-          }
-
-          function Actualizar() {
-              Swal.fire({
-                  title: "Estás seguro?",
-                  text: "El proceso no podrá ser reversible",
-                  icon: "warning",
-                  showCancelButton: true,
-                  confirmButtonColor: "#00913f",
-                  cancelButtonColor: "#d33",
-                  confirmButtonText: "Si, actualizar"
-              }).then((result) => {
-                  if (result.isConfirmed) {
-                      Swal.fire({
-                          title: "Actualizado!",
-                          text: "El personal ha sido actualizado con exito",
-                          icon: "success"
-                      }).then(() => {
-                          window.location.href = "tabla_serenazgo.html";
-                      });
-                  }
-              });
-
-              // Evitar que el formulario se envíe automáticamente
-              return false;
-          }   
     </script>
-    <script>
-      function actualizarCamposCorreo(opcion) {
-        var asuntoInput = document.getElementById("asunto");
-        var cuerpoInput = document.getElementById("cuerpo");
-        
-        if (opcion.id === "aprobar") {
-            asuntoInput.value = "SOLICITUD ACEPTADA- Registro exitoso (Eventos- San Miguel)";
-            cuerpoInput.value = "Estimado [Nombre del Usuario].\nNos complace informarte que su solicitud de registro ha sido aceptada para la plataforma de vecinos de San Miguel. Agradecemos sinceramente su interés en participar y unirse a nuestros emocionantes eventos.\nPara comenzar, aquí está su contraseña temporal para acceder a la página.\nContraseña temporal: X35&%1*DS\nRecuerde que es importante mantener esta contraseña segura y cambiarla después de iniciar sesión por primera vez.";
-        } else if (opcion.id === "denegar") {
-            asuntoInput.value = "SOLICITUD DENEGADA- Registro fallido  (Eventos- San Miguel)";
-            cuerpoInput.value = "Estimado [Nombre del Usuario].\nLamentamos informarle que su solicitud ha sido denegada.\nDebido a que no reside en el distroto de San Miguel.[Añadir otra razón en caso sea necesario] Además,...";
-        }
-    }
     
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src = "script_tabla.js"></script>
