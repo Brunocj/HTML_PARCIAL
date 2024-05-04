@@ -33,7 +33,7 @@
         </div>
         
         
-        <ul class="nav">
+        <ul class="nav" style="position: fixed;">
           
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
@@ -161,68 +161,55 @@
                   <form>
                     <div class="inputs">
                       <label for="nombre">Nombres:</label>
-                      <input type="text" id="nombre" placeholder="Manuel Augusto" >
+                      <input type="text" id="nombre" value="Manuel Augusto" readonly style="cursor: default;">
                         
                       <label for="apellido">Apellidos:</label>
-                      <input type="text" id="apellido" placeholder="Yarleque Medina">
+                      <input type="text" id="apellido" value="Yarleque Medina" readonly style="cursor: default;">
                         
                       <label for="dni">DNI:</label>
-                      <input type="text" id="dni" placeholder="12345678">
+                      <input type="text" id="dni" value="12345678" readonly style="cursor: default;">
                         
                       <label for="dni">Dirección:</label>
-                      <input type="text" id="dni" placeholder="Av. Universitaria 1801">
+                      <input type="text" id="dni" value="Av. Universitaria 1801" readonly style="cursor: default;">
                       
                       <label for="dni">Distrito:</label>
-                      <input type="text" id="dni" placeholder="INRAS/V">
+                      <input type="text" id="dni" value="INRAS/V" readonly style="cursor: default;">
                       
                       <label for="dni">Urbanización:</label>
-                      <input type="text" id="Pando" placeholder="12345678">
+                      <input type="text" id="Pando" value="12345678" readonly style="cursor: default;">
 
                       <label for="dni">Correo(gmail):</label>
-                      <input type="text" id="dni" placeholder="myarleq@pucp.edu.pe">
+                      <input type="text" id="dni" value="myarleq@pucp.edu.pe" readonly style="cursor: default;">
 
                       <label for="nacimiento">Fecha de nacimiento:</label>
-                      <input type="date" id="nacimiento" value="2004-04-03">
+                      <input type="date" id="nacimiento" value="2004-04-03" readonly style="cursor: default;">
 
                       <label for="aprobar">Solicitud:</label>
                       <div class = "radio-group">
-                        <div class="radio-group">
-                          <input type="radio" name="opcion" id="aprobar">
+                        <div class="radio-subgroup">
+                          <input type="radio" name="opcion" id="aprobar" style="margin-top:5px;" onclick="actualizarCamposCorreo(this);">
                           <label for="aprobar">Aprobar</label>
                         </div>
-                        <div class="radio-group">
-                          <input type="radio" name="opcion" id="denegar">
+                        <div class="radio-subgroup">
+                          <input type="radio" name="opcion" id="denegar" style="margin-top:5px;" onclick="actualizarCamposCorreo(this);">
                           <label for="denegar">Denegar</label>
                         </div>
                       </div>
+
+                      <label for="asunto">Asunto del correo:</label>
+                      <input type="text" id="asunto">
+
+                      <label for="cuerpo">Cuerpo del correo:</label>
+                      <textarea type="text" id="cuerpo" style="overflow-y: auto; height:180px; border-color:#c8c8c8; border-radius:5px;"></textarea>
+
+
                     </div>
                     
-                    <div class="inputs">
-                      <label for="titulo" style="font-size: 12px; color: gray;">Asunto del correo:</label>
-                      <input type="text" id="titulo" value="SOLICITUD ACEPTADA- Registro exitoso (Eventos- San Miguel)" style="margin-bottom: 2px;">
-                  
-                      <label for="cuerpo" style="font-size: 12px; color: gray;">Cuerpo del correo:</label>
-                      <div id="cuerpo" contenteditable="true" style="font-size: 12px; margin-bottom: 10px; width: calc(100% - 10px); height: 150px; border: 1px solid #ccc; padding: 3px; overflow-y: auto; margin-right: 20px;">
-                        Estimado [Nombre del Usuario],
-                        <br>
-                
-                        Nos complace informarte que tu solicitud de registro ha sido aceptada para los Eventos San Miguel. Agradecemos sinceramente tu interés en participar y unirte a nuestros emocionantes eventos.
-                
-                        Para comenzar, aquí está tu contraseña temporal para acceder a la página: Contraseña temporal: X35&%1*DS. Recuerda que es importante mantener esta contraseña segura y cambiarla después de iniciar sesión por primera vez.
-                
-                        Si tienes alguna pregunta o necesitas asistencia en cualquier momento, no dudes en contactarnos. Estamos aquí para ayudarte.
-                        <br>
-                        ¡Bienvenido a la comunidad de Eventos San Miguel!
-                        <br>
-                        Atentamente,
-                        <br>
-                        La Administración
-                    </div>
+                    
                     <div class="buttons">
                       <input type="submit" class="green" value="Guardar y enviar" onclick="return Guardar();">
                       <input type="submit" class="red" value="Cancelar" onclick="return Cancelar();">
                   </div>  
-                
   
                 </form>
                    
@@ -298,8 +285,21 @@
               // Evitar que el formulario se envíe automáticamente
               return false;
           }   
-
-
+    </script>
+    <script>
+      function actualizarCamposCorreo(opcion) {
+        var asuntoInput = document.getElementById("asunto");
+        var cuerpoInput = document.getElementById("cuerpo");
+        
+        if (opcion.id === "aprobar") {
+            asuntoInput.value = "SOLICITUD ACEPTADA- Registro exitoso (Eventos- San Miguel)";
+            cuerpoInput.value = "Estimado [Nombre del Usuario].\nNos complace informarte que su solicitud de registro ha sido aceptada para la plataforma de vecinos de San Miguel. Agradecemos sinceramente su interés en participar y unirse a nuestros emocionantes eventos.\nPara comenzar, aquí está su contraseña temporal para acceder a la página.\nContraseña temporal: X35&%1*DS\nRecuerde que es importante mantener esta contraseña segura y cambiarla después de iniciar sesión por primera vez.";
+        } else if (opcion.id === "denegar") {
+            asuntoInput.value = "SOLICITUD DENEGADA- Registro fallido  (Eventos- San Miguel)";
+            cuerpoInput.value = "Estimado [Nombre del Usuario].\nLamentamos informarle que su solicitud ha sido denegada.\nDebido a que no reside en el distroto de San Miguel.[Añadir otra razón en caso sea necesario] Además,...";
+        }
+    }
+    
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
