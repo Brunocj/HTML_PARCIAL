@@ -17,12 +17,15 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../../../assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../LogoSM.png" /> <!--Cambiar la ubicacion del logo de la pagina aca tmb-->
+    <link rel="shortcut icon" href="../../../LogoSM.png" /> <!--Cambiar la ubicacion del logo de la pagina aca tmb-->
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="container-scroller">
+
+
+
       <!-- partial:../../partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
         
@@ -32,12 +35,12 @@
         </div>
         
         
-        <ul class="nav">
+        <ul class="nav" style="position: fixed;">
           
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="../../pag_blanco_admin.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../../pag_principal.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -48,7 +51,7 @@
 
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../dashboar.html">
+            <a class="nav-link" href="../../Dashboard/dashboard.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
@@ -63,7 +66,7 @@
               <span class="menu-title" style="color: white;">Serenazgo</span>
             </a>
           </li>
-          <li class="nav-item menu-items ">
+          <li class="nav-item menu-items">
             <a class="nav-link" href="../../Profesores/tabla_profesor.html">
               <span class="menu-icon">
                 <i class="mdi mdi-teach"></i>
@@ -72,7 +75,7 @@
             </a>
           </li>
           <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
-          <li class="nav-item menu-items ">
+          <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
                 <i class="mdi mdi-nature-people"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
@@ -81,17 +84,17 @@
               <i class="menu-arrow" style="color: white;"></i> 
             </a>
             
-            <div class="collapse " id="ui-basic">
-              <ul class="nav flex-column sub-menu "><!-- Colocar items de la sublista -->
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
                 
-                <li class="nav-item active"> <a class="nav-link active" href="tabla_solicitudes.html" style="color: white;">
+                <li class="nav-item active"> <a class="nav-link" href="../../Vecinos/Solicitudes a acceso/tabla_solicitudes.html" style="color: white;">
                   <span class="menu-icon">
                     <i class="mdi mdi-account-alert"></i>
                   </span>
-                  Sol. acceso</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
-                  <span class="menu-icon">
-                    <i class="mdi mdi-account-alert"></i>
+                  Sol. de acceso</a></li>
+                <li class="nav-item"> <a class="nav-link " href="../../Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
+                  <span class="menu-icon ">
+                    <i class="mdi mdi-account-alert active"></i>
                   </span>
                   Sol. a coordinación</a></li>
               </ul>
@@ -151,8 +154,8 @@
             <div style="display: flex; justify-content: space-between;">
               <div style="display: flex; justify-content: space-between;">
                 <div style="display: flex; flex-direction: column; ">
-                  <h2 class="tabla-title" style ="color:#000f22;">Vecinos | Solicitudes de acceso a la plataforma</h2>  <!--Cambiar el titulo de la tabla-->
-                    
+                  <h2 class="tabla-title" style ="color:#000f22;">Vecinos/Solicitudes de acceso a la plataforma</h2>  <!--Cambiar el titulo de la tabla-->
+
                   <div style="display: flex; gap:30px;margin-top: 10px;">
  
                     <div style="display: flex; gap:10px;">
@@ -173,65 +176,66 @@
                   </th>
                 </tr>
               </thead>
+              <hr style="border: none; border-top: 3px solid black; margin-top: -15px; border-radius: 10px;">
               <tbody style="text-align: center;color: black;">
                 <tr style="text-align: center;">
                   <td><a>Yarleque Medina</a></td>
                   <td><a>Manuel Augusto</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
                 </td>
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>López Pascual</a></td>
                   <td><a>Adrián Alvaro</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Coronado Maxwell</a></td>
                   <td><a>Jorge</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td ><a>Bustamante Melo</a></td>
                   <td><a>Pedro Miguel</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Yarleque Medina</a></td>
                   <td><a>Manuel Augusto</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Yarleque Medina</a></td>
                   <td><a>Manuel Augusto</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Galarga Melo</a></td>
                   <td><a>Elver Augusto</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Calderon Rodriguez</a></td>
                   <td><a>José Ricardo</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>garay Cruz</a></td>
                   <td><a>Eduardo Daniel</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
                 <tr style="text-align: center;">
                   <td><a>Coronado Maxwell</a></td>
                   <td><a>Jorge</a></td>
-                  <td><a href ="solitud_acceso.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
+                  <td><a href ="detalles_solicitudes.html" class ="mdi mdi-account-details"  style ="color: #6c7293; font-size: 20px;"></a>
 
                 </tr>
               </tbody>
@@ -273,7 +277,7 @@
             confirmButtonText: 'Sí, cerrar sesión'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+                window.location.href = "../../../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
             }
         });
     }

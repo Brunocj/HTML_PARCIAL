@@ -1,7 +1,4 @@
-function Cancelar() {
-  window.location.href = "tabla_profesor.html";
-  return false;
-}
+
 
 function Confirmacion() {
   Swal.fire({

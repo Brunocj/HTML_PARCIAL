@@ -25,6 +25,8 @@
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
+      
+      
       <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
         
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
@@ -33,12 +35,12 @@
         </div>
         
         
-        <ul class="nav">
+        <ul class="nav"style="position: fixed;">
           
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="../pag_blanco_admin.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../pag_principal.html"onclick="return CancelarPagPrincipal();"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -49,7 +51,7 @@
 
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../Dashboard/dashboard.html"onclick="return CancelarDashboard();">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
@@ -57,7 +59,7 @@
             </a>
           </li>
           <li class="nav-item menu-items active">
-            <a class="nav-link" href="tabla_serenazgo.html">
+            <a class="nav-link" href="tabla_serenazgo.html"onclick="return CancelarSerenazgo();">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
               </span>
@@ -65,7 +67,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../Profesores/tabla_profesor.html">
+            <a class="nav-link" href="../Profesores/tabla_profesor.html"onclick="return CancelarProfesores();">
               <span class="menu-icon">
                 <i class="mdi mdi-teach"></i>
               </span>
@@ -85,16 +87,16 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
                 
-                <li class="nav-item"> <a class="nav-link" href="../Vecinos/Solicitudes a acceso/tabla_solicitudes.html" style="color: white;">
+                <li class="nav-item"> <a class="nav-link" href="../Vecinos/Solicitudes a acceso/tabla_solicitudes.html" style="color: white;"onclick="return CancelarSolAcceso();">
                   <span class="menu-icon">
                     <i class="mdi mdi-account-alert"></i>
                   </span>
-                  Sol. acceso</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
+                  Sol. de acceso</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;"onclick="return CancelarSolCoordinacion();">
                   <span class="menu-icon">
                     <i class="mdi mdi-account-alert"></i>
                   </span>
-                  Sol. coordinación</a></li>
+                  Sol. a coordinación</a></li>
               </ul>
             </div>
           </li>
@@ -153,7 +155,7 @@
                 <div class = "wrapper"id="formContent">
                   <!-- Tabs Titles -->
                   <h2 style="margin-top: 0; margin-bottom: 20px; text-align: left;  font-size: 30px;">Registro de Personal</h2>
-                  <a href="tabla_serenazgo.html" class="button">Regresar</a>
+                  <a href="tabla_serenazgo.html" class="button" onclick="return Cancelar();">Regresar</a>
                   <hr style="border: none; border-top: 2px solid black;">
 
                   <!-- Icon -->
@@ -234,19 +236,44 @@
             confirmButtonText: 'Sí, cerrar sesión'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+                window.location.href = "../../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
             }
         });
     }
 
-    
+    function Cancelar() {
+        Swal.fire({
+            title: "Estás seguro?",
+            text: "Perdera todo su progreso",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#00913f",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, cancelar",
+            cancelButtonText: "Cancelar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Cancelado!",
+                    text: "Se ha cancelado satisfactoriamente",
+                    icon: "success"
+                }).then(() => {
+                    window.location.href = "tabla_serenazgo.html";
+                });
+            }
+        });
+
+        // Evitar que el formulario se envíe automáticamente
+        return false;
+    }  
 
 
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src = "script_tabla.js"></script>
-    
+    <script src="cancelaciones.js"></script>
+
     <!-- End custom js for this page -->
   </body>
 </html>

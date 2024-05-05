@@ -1,8 +1,6 @@
 
-function Cancelar(){
-    window.location.href = "tabla_serenazgo.html";
-    return false;
-  }
+
+
 
 function Confirmacion() {
     Swal.fire({

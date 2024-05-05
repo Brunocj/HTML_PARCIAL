@@ -25,6 +25,8 @@
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
+
+
       <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
         
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
@@ -33,12 +35,12 @@
         </div>
         
         
-        <ul class="nav">
+        <ul class="nav"style="position: fixed;">
           
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="../pag_blanco_admin.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../pag_principal.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -49,7 +51,7 @@
 
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../Dashboard/dashboard.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
@@ -89,12 +91,12 @@
                   <span class="menu-icon">
                     <i class="mdi mdi-account-alert"></i>
                   </span>
-                  Sol. acceso</a></li>
+                  Sol. de acceso</a></li>
                 <li class="nav-item"> <a class="nav-link" href="../Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
                   <span class="menu-icon">
                     <i class="mdi mdi-account-alert"></i>
                   </span>
-                  Sol. coordinación</a></li>
+                  Sol. a coordinación</a></li>
               </ul>
             </div>
           </li>
@@ -151,7 +153,7 @@
             
             <div class="card2">
               <h2 style="margin-top: 0; margin-bottom: 20px; text-align: left;  font-size: 30px;">Datos de Serenazgo</h2>
-              <a href="tabla_serenazgo.html" class="button">Regresar</a>
+              <a href="tabla_serenazgo.html" class="button"onclick="return Cancelar();">Regresar</a>
               <hr style="border: none; border-top: 2px solid black;"> 
               <div class="card-table">
                   <div class="card-body">
@@ -243,12 +245,36 @@
             confirmButtonText: 'Sí, cerrar sesión'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+                window.location.href = "../../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
             }
         });
     }
 
-    
+    function Cancelar() {
+      Swal.fire({
+          title: "Estás seguro?",
+          text: "Perdera todo su progreso",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#00913f",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Sí, cancelar",
+          cancelButtonText: "Cancelar",
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire({
+                  title: "Cancelado!",
+                  text: "Se ha cancelado satisfactoriamente",
+                  icon: "success"
+              }).then(() => {
+                  window.location.href = "../../ADMIN/Serenazgo/tabla_serenazgo.html";
+              });
+          }
+      });
+
+      // Evitar que el formulario se envíe automáticamente
+      return false;
+    }  
 
 
     </script>
