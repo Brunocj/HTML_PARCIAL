@@ -69,3 +69,21 @@
 .topBtn:hover {
   background-color: #183d6c;
 }
+
+.event-image{
+  width: 526;
+  height: 296;
+  border-radius: 15px;
+  box-shadow: 1px 1px 8px 0 grey;
+}
+#fechas,#descripcion{
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  box-shadow: 1px 1px 8px 0 grey;
+}
+
+.card-img-top{
+  max-height: 260px;
+}

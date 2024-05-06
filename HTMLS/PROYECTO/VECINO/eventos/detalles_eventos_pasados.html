@@ -4,173 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Detalles del evento</title> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <style>
-      /* Estilos CSS para los mensajes de alerta */
-      .swal2-content,
-      .swal2-title {
-          color: black !important; /* Hacer el texto visible */
-      }
-
-      
-        /* Estilos para el título y contenido personalizado del popup de alerta */
-        .swal-custom-title,
-        .swal-custom-content {
-          color: black; /* Color del texto */
-          font-size: 18px; /* Tamaño de fuente */
-          margin-bottom: 10px; /* Espacio inferior */
-      }
-
-      .custom-container  {
-      border: 1px solid rgba(0, 0, 0, 0.5); /* Color del borde con transparencia */
-      padding: 20px;
-      margin-bottom: 25px;
-      background-color: rgba(27, 109, 233, 0.934); /* Color de fondo con transparencia */
-      border-radius: 10px /* Borde redondeado */
-      }
-
-          /* Estilo para el botón fuera de los contenedores */
-    .fixed-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-weight: bold;
-    }
-
-    /* Estilos de las cartas animadas */
-    .container-cards {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-    }
-
-    .card {
-        width: 120px; /* Ajustamos el ancho de la tarjeta */
-        border-radius: .75rem;
-        background-size: cover;
-        cursor: pointer;
-        overflow: hidden;
-        border-radius: 2rem;
-        margin: 0 10px;
-        display: flex;
-        align-items: flex-end;
-        transition: .6s cubic-bezier(.28,-0.03,0,.99);
-        box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-        height: 400px;
-    }
-
-    .card > .row {
-        color: white;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
-    .card > .row > .icon {
-        background: #223;
-        color: white;
-        border-radius: 25%;
-        width: 50px;
-        height: 50px; /* Ajustamos la altura del icono */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 15px;
-    }
-
-    .card > .row > .description {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        overflow: hidden;
-        height: 100px; /* Ajustamos la altura del contenedor de descripción */
-        width: 520px;
-        opacity: 0;
-        transform: translateY(30px);
-        transition-delay: .3s;
-        transition: all .3s ease;
-    }
-
-    .description p {
-        color: #b0b0ba;
-        padding-top: 5px;
-    }
-
-    .description h4 {
-        text-transform: uppercase;
-        text-align: center; /* Alineamos el título al centro */
-    }
-
-    input {
-        display: none;
-    }
-
-    input:checked + label {
-        width: 600px;
-    }
-
-    input:checked + label .description {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-
-    .card[for="c1"] {
-        background-image: url('../fotos/foto9.jpg'); 
-    }
-
-    .card[for="c2"] {
-        background-image: url('foto10.jpg');
-    }
-
-       /* Ajustes para dispositivos móviles */
-       @media (max-width: 767.98px) {
-        .container-cards {
-            flex-direction: column; /* Cambia la dirección del flex a column */
-            align-items: center; /* Centra las cartas */
-        }
-        .card {
-            width: 100%; /* Las cartas ocupan todo el ancho disponible */
-            margin-bottom: 20px; /* Agrega margen inferior para separarlas */
-            height: auto; /* Las cartas ocupan la altura necesaria */
-        }
-        .card > .row > .description {
-            width: 100%; /* El ancho de la descripción ocupa todo el ancho de la carta */
-        }
-    }
-
-    /* Tamaño de fuente más grande */
-    #fechas p {
-        font-size: 15px; /* Usamos em para el tamaño de fuente */
-        line-height: 1.5; /* Ajustamos el interlineado */
-    }
-
-    #fechas h4 {
-        font-weight: bold;
-        font-size: 30px; /* Usamos em para el tamaño de fuente */
-    }
-
-    /* Ajustes para dispositivos móviles */
-    @media (max-width: 767.98px) {
-        #fechas.custom-container {
-            height: auto; /* Altura automática */
-        }
-    }
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-    * {
-
-      font-family: "Poppins", sans-serif;
-    }
-    * {
-      font-family: "Poppins", sans-serif;;
-    }
-
-
-
-
-
-    </style>
+    <title>Mi perfil</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../../assets/vendors/css/vendor.bundle.base.css">
@@ -181,27 +15,33 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <link rel="stylesheet" href="styles_eventos.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../LogoSM.png" />
+    <link rel="shortcut icon" href="../LogoSM.png" />
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel ="stylesheet" href = "styles_eventos.css">
   </head>
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #225496;">  <!--Cambiar al color mas oscuro-->
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #225496;">
-          <h3>Menú de navegación</h3>
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
+        
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
+          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
         </div>
-        <ul class="nav">
+        
+        
+        <ul class="nav" style="position: fixed;">
+          
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-          <li class="nav-item menu-items">
+          <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
+            
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
-              <span class="menu-title" style="color: white;">Pagina principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
+              <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
             </a>
           </li>
           <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
@@ -210,7 +50,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="#">
               <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+                <i class="mdi mdi-account"></i>
               </span>
               <span class="menu-title" style="color: white;">Mi perfil</span>
             </a>
@@ -218,31 +58,31 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
               <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                <i class="mdi mdi-email"></i>
               </span>
               <span class="menu-title" style="color: white;">Correo</span>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../solicitarCoordinador.html">
+            <a class="nav-link" href="#">
               <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
+                <i class="mdi mdi-key-change"></i>
               </span>
               <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+          <li class="nav-item menu-items active">
+            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../../../../index.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Incidencias</span>
             </a>
@@ -250,29 +90,11 @@
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Cerrar sesión</span>
             </a>
           </li>
-          <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Lista</span>
-              <i class="menu-arrow" style="color: white;"></i> 
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
-                <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Typography</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Codigo para un item de la barra lateral que SI tiene sublista FIN -->
         </ul>
       </nav>
       <!-- partial -->
@@ -280,7 +102,7 @@
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           
-          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #225496;"> <!--Cambiar al color mas oscuro-->
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #000f22"> <!--Cambiar al color mas oscuro-->
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu" style="color: white;"></span> <!--Cambiar el color de las 3 rayas de acuerdo a lo necesario (a negro en todo caso)-->
             </button>
@@ -292,10 +114,10 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500;">Manuel Yarleque</h2>
-                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500;">Vecino sanmiguelino</h5>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarleque</h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Vecino sanmiguelino</h5>
                     </div>
-                    <img class="img-s rounded-circle" src="../../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar por el logo de san miguel-->
+                    <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
                   </div>
                 </a>
@@ -309,7 +131,7 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style ="background-color: #9bbee8;"> <!--Cambiar al color mas claro-->
+          <div class="content-wrapper" style ="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
             <div class="container">
                 <div class="row">
                                                   <div class="col-md-6">
