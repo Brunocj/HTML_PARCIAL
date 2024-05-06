@@ -5,10 +5,47 @@
   margin-top: 20px;
 }
  
+.noti-card {
+  position: relative;
+  display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del contenido */
+}
+
+.notification-badge {
+  position: relative; /* Cambia a posición relativa para que el mensaje se posicione correctamente */
+  display: inline-block; /* Permite que el badge y el mensaje estén en línea */
+  margin-right: 10px; /* Espacio entre el badge y el mensaje */
+  left: 190px;
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.notification-message {
+  display: none;
+  position: absolute;
+  top: -40%;
+  transform: translateX(-50%);
+  left: calc(100% + 10px); /* Posición a la derecha del badge */
+  background-color: #fcfab2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap; /* Evita que el texto se rompa */
+}
+
 .row-1 {
 
   width: 100%;
-  gap: 30px;
+  gap: 20px;
   flex-direction: row;
   left: 0;
   display: flex;
@@ -16,10 +53,8 @@
   align-items: center;
 }
 .row-2 {
-
   width: 100%;
   gap: 30px;
-
   left: 0;
   display: flex;
   flex-direction: row;
@@ -27,27 +62,92 @@
   align-items: center;
 }
 
+.card-content {
+  padding: 20px;
+}
+
 .card-1 {
-  width: 300px;
+  width: 800px;
   height: 300px;
   position: relative;
   perspective: 1000px;
   margin-left: 10px;
+  border-radius: 15px;
+  bottom: 20px;
 }
 .card-2 {
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 250px;
+  right: -10px;
   position: relative;
   perspective: 1000px;
-  margin-left: 10px;
+  margin-left: 0;
+  border-radius: 15px;
 }
 .card-3 {
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 250px;
   position: relative;
   perspective: 1000px;
   margin-left: 10px;
+  border-radius: 15px;
+  right: 40px;
 }
+
+.noti {
+  width: 210px;
+  height: 182px;
+  position: relative;
+  perspective: 1000px;
+  margin-left: 10px;
+  border-radius: 15px;
+  right: -40px;
+}
+
+.information-1 {
+  width: 300px; /* Ancho de la carta */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden; /* Para que la imagen no se salga del borde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.information-1 img {
+  width: 100%;
+  display: block;
+}
+
+.card-1 .font img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+}
+
+.card-2 .font img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+}
+
+
+
+.card-3 .font img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+}
+
+.noti .font img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+}
+
+
 
 .font, .back {
   position: absolute;
@@ -63,8 +163,8 @@
   border-radius: 10px;
 }
 
-.font {
-  background-color: #FFF;
+.card-1 .font {
+  background-color: white;
 }
 
 .back {
@@ -72,13 +172,6 @@
   transform: rotateY(180deg);
 }
 
-.card-1:hover .font {
-  transform: rotateY(180deg);
-}
-
-.card-1:hover .back {
-  transform: rotateY(360deg);
-}
 .card-2:hover .font {
   transform: rotateY(180deg);
 }

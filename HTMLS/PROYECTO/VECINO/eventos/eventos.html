@@ -30,7 +30,6 @@
   height: auto; /* Mantén la proporción de la imagen */
   display: block; /* Evita espacios en blanco debajo de la imagen */
 }
-
     </style>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
@@ -42,27 +41,33 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <link rel="stylesheet" href="styles_eventos.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../LogoSM.png" />
+    <link rel="shortcut icon" href="../LogoSM.png" />
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel ="stylesheet" href = "styles_eventos.css">
   </head>
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #225496;">  <!--Cambiar al color mas oscuro-->
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #225496;">
-          <h3>Menú de navegación</h3>
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
+        
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
+          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
         </div>
-        <ul class="nav">
+        
+        
+        <ul class="nav" style="position: fixed;">
+          
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-          <li class="nav-item menu-items">
+          <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
+            
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
-              <span class="menu-title" style="color: white;">Pagina principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
+              <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
             </a>
           </li>
           <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
@@ -71,7 +76,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="#">
               <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+                <i class="mdi mdi-account"></i>
               </span>
               <span class="menu-title" style="color: white;">Mi perfil</span>
             </a>
@@ -79,7 +84,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
               <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                <i class="mdi mdi-email"></i>
               </span>
               <span class="menu-title" style="color: white;">Correo</span>
             </a>
@@ -87,23 +92,23 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="#">
               <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
+                <i class="mdi mdi-key-change"></i>
               </span>
               <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          <li class="nav-item menu-items active">
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../../../../index.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Incidencias</span>
             </a>
@@ -111,29 +116,11 @@
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Cerrar sesión</span>
             </a>
           </li>
-          <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Lista</span>
-              <i class="menu-arrow" style="color: white;"></i> 
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
-                <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Typography</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Codigo para un item de la barra lateral que SI tiene sublista FIN -->
         </ul>
       </nav>
       <!-- partial -->
@@ -141,7 +128,7 @@
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           
-          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #225496;"> <!--Cambiar al color mas oscuro-->
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #000f22"> <!--Cambiar al color mas oscuro-->
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu" style="color: white;"></span> <!--Cambiar el color de las 3 rayas de acuerdo a lo necesario (a negro en todo caso)-->
             </button>
@@ -153,10 +140,10 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500;">Manuel Yarleque</h2>
-                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500;">Vecino sanmiguelino</h5>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarleque</h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Vecino sanmiguelino</h5>
                     </div>
-                    <img class="img-s rounded-circle" src="../../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar por el logo de san miguel-->
+                    <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
                   </div>
                 </a>
@@ -170,19 +157,19 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style ="background-color: #9bbee8;"> <!--Cambiar al color mas claro-->
+          <div class="content-wrapper" style ="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
             <!-- Sección de contenido -->
             <section class="py-3">
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-md-4">
-                    <a href="mis_eventos.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #225496;">Mis Eventos</a>
+                    <a href="mis_eventos.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #000f22;">Mis Eventos</a>
                   </div>
                   <div class="col-md-4">
                     <a href="#" class="btn btn-primary btn-lg d-block mb-3 topBtn" style ="background-color: #183d6c;">Eventos</a> <!--Cambiar el color de acuerdo al que este seleccionado (el codigo de color de estalinea es el que se debe usar para cuando se encuentra una pestaña seleccionada; en coordinador, usar otro color, pero que sea más oscuro)-->
                   </div>
                   <div class="col-md-4">
-                    <a href="eventos_pasados.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #225496;">Eventos Pasados</a>
+                    <a href="eventos_pasados.html" class="btn btn-primary btn-lg d-block mb-3" style ="background-color: #000f22;">Eventos Pasados</a>
                   </div>
                 </div>
               </div>
