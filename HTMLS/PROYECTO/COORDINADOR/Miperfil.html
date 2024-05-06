@@ -4,11 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Página Principal Coordinador</title>
+    <title>Mi perfil</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="../../../assets/css/styles_pag_principales.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End Plugin css for this page -->
@@ -16,7 +15,7 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="styles_pagina_principal.css">
+    <link rel="stylesheet" href="styles_perfil.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../LogoSM.png" />
     <!--JS para los popups-->
@@ -38,7 +37,7 @@
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="pagina_principal_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -49,7 +48,7 @@
 
           
           <li class="nav-item menu-items active">
-            <a class="nav-link" href="pagina_principal_coordinador.html">
+            <a class="nav-link" href="#">
               <span class="menu-icon">
                 <i class="mdi mdi-account"></i>
               </span>
@@ -107,8 +106,8 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrian López</h2>
-                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de Cultura</h5>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrian Lopez</h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de cultura</h5>
                     </div>
                     <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
@@ -125,20 +124,60 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper" style ="background-color: #b4e6bc;"> <!--Cambiar al color mas claro-->
-            <div class="card2">
-              <div class="cont-img">
-                <img src="../sanMiguel.png" alt="Imagen San Miguel">
-              </div>
-              <div class="cont-main">
-                <div class="cont-text">
-                  <h1>¡ Bienvenido, Coordinador Sanmiguelino !</h1>
-                  <h3>¡Tu creatividad y dedicación son clave para un distrito vibrante! Este es tu espacio para planificar y organizar eventos que deleiten a nuestra comunidad, así como para gestionar incidencias locales.  </h3>
-                  <h3>¡Adelante y haz que cada evento sea memorable, mientras trabajamos juntos para abordar las necesidades de nuestra comunidad!</h3>
+            <!--CONTENIDO-->
+            <div class="main-table">
+              <h2>Datos personales:</h2>
+              <div class="card-table">
+                <div class="card-body">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Nombre(s)</td>
+                        <td>:</td>
+                        <td>Manuel Augusto</td>
+                      </tr>
+                      <tr>
+                        <td>Apellidos</td>
+                        <td>:</td>
+                        <td>Yarlequé Medina</td>
+                      </tr>
+                      <tr>
+                        <td>Correo</td>
+                        <td>:</td>
+                        <td>yarleque.thanos@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td>DNI</td>
+                        <td>:</td>
+                        <td>53856284</td>
+                      </tr>
+                      <tr>
+                        <td>Número telefónico</td>
+                        <td>:</td>
+                        <td>998503948</td>
+                      </tr>   
+                    </tbody>
+                  </table>
                 </div>
               </div>
+      
+              <h2>Actualizar datos:</h2>
+              <div class="card-table">
+                <div class="card-body">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><i class="mdi mdi-lock" style="font-size:25px"></i></td>
+                        <td><a href="../LOGIN/chPass.html" style ="color: black;">Cambiar contraseña</a></td>
+                      </tr>
+                      <tr>
+                        <td><i class="mdi mdi-phone" style="font-size:25px"></i></td> 
+                        <td><a href="../LOGIN/chPhone.html" style ="color: black;">Cambiar número telefónico</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
             </div>
-            
-            
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
@@ -160,7 +199,6 @@
     <script src="../../../assets/js/misc.js"></script>
     <script src="../../../assets/js/settings.js"></script>
     <script src="../../../assets/js/todolist.js"></script>
-    <script src="../../../assets/js/paginas_princpales.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script>
@@ -175,7 +213,7 @@
             confirmButtonText: 'Sí, cerrar sesión'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+                window.location.href = "LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
             }
         });
     }
