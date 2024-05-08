@@ -4,20 +4,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mi perfil</title>
+    <title>Solicitud</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="styles_incidencia.css">
+    <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../../../assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End Plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="styles_perfil.css">
+    <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../LogoSM.png" />
+    <link rel="shortcut icon" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\img\LogoSM.png" />
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
@@ -31,7 +32,7 @@
           <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;"></h3>
         </div>
         
-       
+        
         <ul class="nav">
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
@@ -46,7 +47,7 @@
           <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
 
           
-          <li class="nav-item menu-items active">
+          <li class="nav-item menu-items ">
             <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\Miperfil.html">
               <span class="menu-icon">
                 <i class="mdi mdi-account"></i>
@@ -70,7 +71,7 @@
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
           </li>
-          <li class="nav-item menu-items ">
+          <li class="nav-item menu-items active">
             <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\Incidencias\incidencia_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
@@ -100,7 +101,7 @@
             
             <ul class="navbar-nav navbar-nav-right">
               
-              
+        
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
@@ -108,7 +109,7 @@
                       <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrian Lopez</h2>
                       <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de cultura</h5>
                     </div>
-                    <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
+                    <img class="img-xs rounded-circle" src="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\img\LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
                   </div>
                 </a>
@@ -122,61 +123,97 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style ="background-color: #b4e6bc;"> <!--Cambiar al color mas claro-->
+          <div class="content-wrapper" style ="background-color:#b4e6bc ;"> <!--Cambiar al color mas claro-->
             <!--CONTENIDO-->
-            <div class="main-table">
-              <h2>Datos personales:</h2>
-              <div class="card-table">
-                <div class="card-body">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>Nombre(s)</td>
-                        <td>:</td>
-                        <td>Manuel Augusto</td>
-                      </tr>
-                      <tr>
-                        <td>Apellidos</td>
-                        <td>:</td>
-                        <td>Yarlequé Medina</td>
-                      </tr>
-                      <tr>
-                        <td>Correo</td>
-                        <td>:</td>
-                        <td>yarleque.thanos@gmail.com</td>
-                      </tr>
-                      <tr>
-                        <td>DNI</td>
-                        <td>:</td>
-                        <td>53856284</td>
-                      </tr>
-                      <tr>
-                        <td>Número telefónico</td>
-                        <td>:</td>
-                        <td>998503948</td>
-                      </tr>   
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-      
-              <h2>Actualizar datos:</h2>
-              <div class="card-table">
-                <div class="card-body">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td><i class="mdi mdi-lock" style="font-size:25px"></i></td>
-                        <td><a href="../LOGIN/chPass.html" style ="color: black;">Cambiar contraseña</a></td>
-                      </tr>
-                      <tr>
-                        <td><i class="mdi mdi-phone" style="font-size:25px"></i></td> 
-                        <td><a href="../LOGIN/chPhone.html" style ="color: black;">Cambiar número telefónico</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <h2 class="tabla-title" style="color: #000f22; margin-bottom: 0px;">Incidencias</h2>
+              <button class="btnTable" style="display: flex; align-items: center;" onclick="window.location.href='registrar_incidencia.html';">
+                  Agregar Incidencia
+                  <a class="mdi mdi-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
+              </button>
+          </div>
+          
+
+
+            <table id="miTabla" class="table" style="margin-bottom:15px;">
+              <thead style="background-color: #000f22;"> <!--Cambiar al color de fondo (claro) de la pagina, pero un poco mas oscuro-->
+                <tr style="text-align: center; font-weight:800;">
+                  <th style ="color: white;">Descripción</th>
+                  <th style ="color: white;">Fecha</th>
+                  <th style ="color: white;">Estado</th>
+                  <th style="width: 20px; color: white;"></th>
+                </tr>
+              </thead>
+              <tbody style="text-align: center; color: black;">
+                <tr style="text-align: center;">
+                  <td>Asalto a la altura de la puerta Riva Agüero de la PUCP</a></td>
+                  <td>12/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Robo en el parque Juan Pablo II</a></td>
+                  <td>13/03/2024</a></td>
+                  <td>Pendiente</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Escape de los leones del Parque de las Leyendas</a></td>
+                  <td>11/01/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Choque en el cruce de las avenidas Universitaria con La Marina</a></td>
+                  <td>22/04/2024</a></td>
+                  <td>Pendiente</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</td>
+                  <td>10/04/2024</td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
@@ -188,16 +225,16 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="../../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../../../../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="../../../assets/js/off-canvas.js"></script>
-    <script src="../../../assets/js/hoverable-collapse.js"></script>
-    <script src="../../../assets/js/misc.js"></script>
-    <script src="../../../assets/js/settings.js"></script>
-    <script src="../../../assets/js/todolist.js"></script>
+    <script src="../../../../assets/js/off-canvas.js"></script>
+    <script src="../../../../assets/js/hoverable-collapse.js"></script>
+    <script src="../../../../assets/js/misc.js"></script>
+    <script src="../../../../assets/js/settings.js"></script>
+    <script src="../../../../assets/js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script>
@@ -218,5 +255,8 @@
     }
     </script>
     <!-- End custom js for this page -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src ="script_incidencia.js"></script>
   </body>
 </html>
