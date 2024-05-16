@@ -60,10 +60,38 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: -20px;
+  margin-bottom: -50px;
+}
+
+.row-3 {
+  width: 100%;
+  gap: 20px;
+  flex-direction: row;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-content {
   padding: 20px;
+}
+
+.exclusive-card-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.exclusive-card{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+  margin-left: 10px;
+  border-radius: 15px;
+  bottom: 20px;
+
 }
 
 .card-1 {
@@ -81,7 +109,7 @@
   right: -10px;
   position: relative;
   perspective: 1000px;
-  margin-left: 50px;
+  margin-left: 10px;
   border-radius: 15px;
 }
 .card-3 {
@@ -102,19 +130,6 @@
   margin-left: 10px;
   border-radius: 15px;
   right: -40px;
-}
-
-.information-1 {
-  width: 300px; /* Ancho de la carta */
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden; /* Para que la imagen no se salga del borde */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.information-1 img {
-  width: 100%;
-  display: block;
 }
 
 .card-1 .font img {
@@ -198,6 +213,14 @@
 
 .card-3:hover .back {
   transform: rotateY(360deg);
+}
+
+.card-2:hover {
+  z-index: 2; /* Aumenta el z-index para que esté por encima de las cartas de la tercera fila */
+}
+
+.card-3:hover {
+  z-index: 1; /* Disminuye el z-index para que esté por debajo de las cartas de la segunda fila */
 }
 
 .RowWrapper{
