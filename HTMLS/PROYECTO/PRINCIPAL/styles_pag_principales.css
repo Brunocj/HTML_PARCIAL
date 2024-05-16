@@ -4,7 +4,16 @@
   margin-bottom: 50px;
   margin-top: 20px;
 }
- 
+
+.underline-hover {
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  cursor: pointer; /* Cambia el cursor al pasar por el texto */
+}
+
+.underline-hover:hover {
+  text-decoration: underline; /* Agrega subrayado al pasar el cursor */
+}
+
 .noti-card {
   position: relative;
   display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del contenido */
