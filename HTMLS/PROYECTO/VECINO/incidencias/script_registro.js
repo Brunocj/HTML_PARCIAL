@@ -1,5 +1,5 @@
 function Cancelar() {
-  window.location.href = "incidencia_coordinador.html";
+  window.location.href = "../incidencias/incidencia_vecino.html";
   return false;
 }
 

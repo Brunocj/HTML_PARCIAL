@@ -37,7 +37,7 @@
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../PRINCIPAL/pagina_principal_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -48,7 +48,7 @@
 
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="Miperfil.html">
               <span class="menu-icon">
                 <i class="mdi mdi-account"></i>
               </span>
@@ -72,7 +72,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -80,7 +80,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../../index.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="incidencias/incidencia_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -169,10 +169,11 @@
             showCancelButton: true,
             confirmButtonColor: '#00913f',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, cerrar sesión'
+            confirmButtonText: 'Sí, cerrar sesión',
+            cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+                window.location.href = "../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
             }
         });
     }

@@ -7,6 +7,7 @@ function AnularPopUp() {
     cancelButtonColor: '#d33',
     confirmButtonText: 'Confirmar',
     cancelButtonText: 'Cancelar'
+
 }).then((result) => {
     if (result.isConfirmed) {
         // Aquí iría el código para enviar la solicitud
@@ -114,7 +115,8 @@ function mostrarPopupCerrarSesion() {
                                                       showCancelButton: true,
                                                       confirmButtonColor: '#00913f',
                                                       cancelButtonColor: '#d33',
-                                                      confirmButtonText: 'Sí, cerrar sesión'
+                                                      confirmButtonText: 'Sí, cerrar sesión',
+                                                      cancelButtonText: 'Cancelar'
                                                   }).then((result) => {
                                                       if (result.isConfirmed) {
                                                           window.location.href = "../../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario

@@ -24,79 +24,80 @@
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
         
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
-          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
-          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
-        </div>
-        
-        
-        <ul class="nav" style="position: fixed;">
-          
-          <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-          <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
-            
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
-              <span class="menu-icon">
-                <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
-            </a>
-          </li>
-          <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
-
-          
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
-              <span class="menu-icon">
-                <i class="mdi mdi-account"></i>
-              </span>
-              <span class="menu-title" style="color: white;">Mi perfil</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
-              <span class="menu-icon">
-                <i class="mdi mdi-email"></i>
-              </span>
-              <span class="menu-title" style="color: white;">Correo</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
-              <span class="menu-icon">
-                <i class="mdi mdi-key-change"></i>
-              </span>
-              <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items active">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
-              <span class="menu-icon">
-                <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Eventos</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="../../../../index.html"> <!-- Cambiar href de acuerdo a lo necesario -->
-              <span class="menu-icon">
-                <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Incidencias</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
-              <span class="menu-icon">
-                <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Cerrar sesión</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+              <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
+                <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
+                <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
+              </div>
+              
+              
+              <ul class="nav" style="position: fixed;">
+                
+                <!-- Codigo para un item de la barra lateral que no tiene sublista -->
+                <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
+                  
+                  <a class="nav-link" href="../../PRINCIPAL/pagina_principal_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+                    <span class="menu-icon">
+                      <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                    </span>
+                    <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
+                  </a>
+                </li>
+                <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
+      
+                
+                <li class="nav-item menu-items">
+                  <a class="nav-link" href="../Miperfil.html">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-account"></i>
+                    </span>
+                    <span class="menu-title" style="color: white;">Mi perfil</span>
+                  </a>
+                </li>
+                <li class="nav-item menu-items">
+                  <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-email"></i>
+                    </span>
+                    <span class="menu-title" style="color: white;">Correo</span>
+                  </a>
+                </li>
+                <li class="nav-item menu-items">
+                  <a class="nav-link" href="../solicitarCoordinador.html">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-key-change"></i>
+                    </span>
+                    <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
+                  </a>
+                </li>
+                <li class="nav-item menu-items active">
+                  <a class="nav-link" href="../eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+                    <span class="menu-icon">
+                      <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                    </span>
+                    <span class="menu-title" style="color: white;">Eventos</span>
+                  </a>
+                </li>
+                <li class="nav-item menu-items">
+                  <a class="nav-link" href="../incidencias/incidencia_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+                    <span class="menu-icon">
+                      <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                    </span>
+                    <span class="menu-title" style="color: white;">Incidencias</span>
+                  </a>
+                </li>
+                <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
+                  <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+                    <span class="menu-icon">
+                      <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                    </span>
+                    <span class="menu-title" style="color: white;">Cerrar sesión</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:../../partials/_navbar.html -->
