@@ -171,15 +171,15 @@
 }
 
 .card-1 .font img {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;*/
+  height: 50%;
   object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
   border-radius: 15px;
 }
 
 .card-2 .font img {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;*/
+  height: 70%;
   object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
   border-radius: 15px;
 }
@@ -199,8 +199,8 @@
 }
 
 .card-3 .font img {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;*/
+  height: 70%;
   object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
   border-radius: 15px;
 }
