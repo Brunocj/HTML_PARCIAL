@@ -33,24 +33,22 @@
         
         
         <ul class="nav">
-          
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items active"> <!-- la clase "active" solo se usa para la vista que está activa -->
             
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
             </a>
           </li>
           <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
-
-          
+          <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items">
             <a class="nav-link" href="../VECINO/Miperfil.html">
               <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+                <i class="mdi mdi-account"></i>
               </span>
               <span class="menu-title" style="color: white;">Mi perfil</span>
             </a>
@@ -58,7 +56,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
               <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                <i class="mdi mdi-email"></i>
               </span>
               <span class="menu-title" style="color: white;">Correo</span>
             </a>
@@ -66,7 +64,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="../VECINO/solicitarCoordinador.html">
               <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
+                <i class="mdi mdi-key-change"></i>
               </span>
               <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
             </a>
@@ -74,7 +72,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="../VECINO/eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
@@ -82,7 +80,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="../VECINO/incidencias/incidencia_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Incidencias</span>
             </a>
@@ -90,28 +88,12 @@
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Cerrar sesión</span>
             </a>
           </li>
-          <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Lista</span>
-              <i class="menu-arrow" style="color: white;"></i> 
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
-                <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/buttons.html" style="color: white;">a</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/dropdowns.html" style="color: white;">b</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/typography.html" style="color: white;">c</a></li>
-              </ul>
-            </div>
-          </li>
+
           <!-- Codigo para un item de la barra lateral que SI tiene sublista FIN -->
         </ul>
       </nav>
@@ -132,7 +114,7 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarleque</h2>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarlequé</h2>
                       <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Vecino sanmiguelino</h5>
                     </div>
                     <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
@@ -150,52 +132,90 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper" style ="background-color: #f6f9ff;"> <!--Cambiar al color mas claro-->
-            <div class="title-pp">
-              <h2>Bienvenido Vecino San Miguelino!</h2>
-            </div>
-            <div  class="RowWrapper">
-              <div class="row-1">
-                <div class="card-1" style ="color:black;">
-                  <div class="font"><span>Front</span></div>
-                  <div class="back"><span>Back</span></div>
+                <div class="title-pp">
+                  <h2>Bienvenido Vecino San Miguelino!</h2>
                 </div>
-                <div class="information-1" style ="color:black;">
-                  <div class="font">
-                    <img src="ambiente.jpg" alt="Imagen">
-                    <div class="card-content">
-                      <h3>Distrito de San Miguel</h3>
-                      <p>Estimado vecino, ayúdanos a mantener nuestros distintos ambientes libres de basura.</p>
+                <div  class="RowWrapper">
+                  <div class="row-1">
+                    <div class="card-1" style ="color:black;">
+                      <div class="font">
+                        <img src="adminn.jpg" alt="SanMiguel">
+                        <div class="card-content">
+                          <h3>¿Cuál es tu función como vecino?</h3>
+                          <p>Tu función como vecino se basa en brindar todo tu apoyo para mantener un ambiente armonioso y agradable en nuestro distrito. </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="back"><span>Back</span></div>
-                </div>
-                <div class="card-3" style ="color:black;">
-                  <div class="font"><span>Front</span></div>
-                  <div class="back"><span>Back</span></div>
+                  <div class="row-2">
+                    <div class="card-ma" style ="color:black;" >
+                      <div class="font">
+                        <img src="medio_ambiente_vecino.png" alt="Cuidado Ambientes" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        <span style="font-size: 16px; font-weight: bold;">¡Cuidemos nuestras áreas verdes para una mejor imagen de nuestra comunidad!</span>
+                      </div>
+                      <div class="back" style="background-color: white; padding: 10px;">
+                        <span style="font-size: 16px;"> Ayúdanos a mantener nuestros distintos ambientes libres de basura.</span>
+                          <img src="no_botar_basura.png" alt="No Botar Basura" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                      </div>
+                    </div>
+                    <div class="card-mv" style ="color:black;">
+                      <div class="font">
+                        <img src="unidad_vecinal_1.png" alt="Vecinos">
+                        <span style="font-size: 16px; font-weight: bold;">¡Consolidemos nuestra unión como distrito apoyándonos unos a otros!</span>
+                      </div>
+                      <div class="back" style="background-color: white; padding: 10px;">
+                        <span style="font-size: 16px;"> Avisemos cualquier problema o inconveniente que observemos, así no seamos nosotros los afectados.</span>
+                          <img src="unidad_vecinal_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                      </div>
+                    </div>
+                  </div>
+                  <h3 style="color: black; padding: 25px; margin-bottom: -20px;">A continuación, podrás visualizar las acciones que puedes realizar en la plataforma como vecino.<br><span style="font-size: 14px;">Pase el mouse por las siguientes imágenes para más información.</span></h3>
+                  <div class = "container-rows">
+                    <div class="row-2">
+                      <div class="card-2" style ="color:black;" >
+                        <div class="font">
+                          <img src="solicitud_1.png" alt="Solicitud Coordinador">
+                        </div>
+                        <div class="back" style="background-color: #f6f9ff; padding: 10px;">
+                          <span style="font-size: 16px;"> Podrás enviar una solicitud al administrador para volverte coordinador de una de las dos áreas y comenzar a organizar eventos.<br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Solicitud para coordinador" para dirigirse automáticamente a la página de la solicitud.</span></span>
+                            <img src="solicitud_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <a href="../VECINO/solicitarCoordinador.html" style="color: black; font-weight: bold;"> Solicitud para <br> Coordinador</a>
+                      <div class="card-2" style ="color:black;">
+                        <div class="font">
+                          <img src="eventos_1.png" alt="Eventos">
+                        </div>
+                        <div class="back" style="background-color: #f6f9ff; padding: 10px;">
+                          <span style="font-size: 16px;"> Podrás visualizar la lista de eventos para que puedas inscribirte y participar en los eventos que te agraden.<br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Visualizar eventos" para dirigirse automáticamente a la lista de eventos.</span></span>
+                          <img src="eventos_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <a href="../VECINO/eventos/eventos.html" style="color: black; font-weight: bold;"> Visualizar <br> Eventos</a>
+                      
+
+                    </div>
+                    <div class="row-3">
+                      <div class="card-3" style ="color:black;" >
+                        <div class="font">
+                          <img src="incidencia_1.png" alt="Incidencias">
+                        </div>
+                        <div class="back" style="background-color: #f6f9ff; padding: 10px;">
+                          <span style="font-size: 16px;"> Podrás visualizar la lista de incidencias donde podrás registrar una incidencia si has sufrido o visto algún problema en el distrito.<br><span style="color: red;">No olvides que serás penalizado si registras más de 5 falsas alarmas.</span> <br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Registrar Incidencia" para dirigirse automáticamente a la lista de incidencias.</span></span>
+                          <img src="incidencia_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div> 
+                      </div>
+                      <a href="../VECINO/incidencias/incidencia_vecino.html" style="color: black; font-weight: bold;">Registrar <br> Incidencia </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="row-2">
-                <div class="card-1" style ="color:black;">
-                  <div class="font"><span>Front</span></div>
-                  <div class="back"><span>Back</span></div>
-                </div>
-                <div class="card-2" style ="color:black;">
-                  <div class="font"><span>Front</span></div>
-                  <div class="back"><span>Back</span></div>
-                </div>
-                <div class="card-3" style ="color:black;">
-                  <div class="font"><span>Front</span></div>
-                  <div class="back"><span>Back</span></div>
-                </div>
-              </div>
+              <!-- content-wrapper ends -->
+              <!-- partial:../../partials/_footer.html -->
+              <!-- partial -->
+              
             </div>
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:../../partials/_footer.html -->
-          <!-- partial -->
-          
-        </div>
-        <!-- main-panel ends -->
+            <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
     </div>
@@ -206,13 +226,12 @@
     <!-- Plugin js for this page -->
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../../assets/js/off-canvas.js"></script>
     <script src="../../../assets/js/hoverable-collapse.js"></script>
     <script src="../../../assets/js/misc.js"></script>
     <script src="../../../assets/js/settings.js"></script>
     <script src="../../../assets/js/todolist.js"></script>
-    <script src="../../../assets/js/paginas_principales.js"></script>
+    <script src="paginas_principales.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script>
@@ -233,6 +252,7 @@
         });
     }
     </script>
+    
     <!-- End custom js for this page -->
   </body>
 </html>

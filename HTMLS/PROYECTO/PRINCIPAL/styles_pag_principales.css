@@ -36,6 +36,15 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.container-rows {
+  background-color: rgba(255, 255, 255, 0.541);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 10px;
+}
+
 .notification-message {
   display: none;
   position: absolute;
@@ -121,6 +130,26 @@
   margin-left: 10px;
   border-radius: 15px;
 }
+.card-ma{
+  width: 390px;
+  height: 200px;
+  right: -10px;
+  position: relative;
+  perspective: 1000px;
+  margin-left: 5px;
+  margin-top: -20px;
+  border-radius: 15px;
+}
+.card-mv{
+  width: 390px;
+  height: 200px;
+  right: 6px;
+  position: relative;
+  perspective: 1000px;
+  margin-left: 0;
+  margin-top: -20px;
+  border-radius: 15px;
+}
 .card-3 {
   width: 300px;
   height: 300px;
@@ -155,7 +184,19 @@
   border-radius: 15px;
 }
 
+.card-ma .font img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+}
 
+.card-mv .font img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+}
 
 .card-3 .font img {
   width: 100%;
@@ -204,9 +245,41 @@
   background-color: white;
 }
 
+.card-ma .font{
+  background-color: white;
+}
+
+.card-mv .font{
+  background-color: white;
+}
+
 .back {
   background-color: #BDBDBD;
   transform: rotateY(180deg);
+}
+
+.exclusive-card:hover .font{
+  transform: rotateY(180deg);
+}
+
+.exclusive-card:hover .back{
+  transform: rotateY(360deg);
+}
+
+.card-ma:hover .font{
+  transform: rotateY(180deg);
+}
+
+.card-ma:hover .back{
+  transform: rotateY(360deg);
+}
+
+.card-mv:hover .font{
+  transform: rotateY(180deg);
+}
+
+.card-mv:hover .back{
+  transform: rotateY(360deg);
 }
 
 .card-2:hover .font {

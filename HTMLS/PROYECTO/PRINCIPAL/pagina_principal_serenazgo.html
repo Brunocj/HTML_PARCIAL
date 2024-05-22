@@ -4,11 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Página principal Serenazgo</title>
+    <title>Página Principal Serenazgo</title>
     <!-- plugins:css -->
+    <link rel="stylesheet" href="styles_pag_principales.css">
     <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="../../../assets/css/styles_pag_principales.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End Plugin css for this page -->
@@ -48,44 +48,54 @@
 
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
-              <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
-              </span>
-              <span class="menu-title" style="color: white;">Mi perfil</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
-              <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
-              </span>
-              <span class="menu-title" style="color: white;">Correo</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../ADMIN/Dashboard/dashboard.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
-              <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
+              <span class="menu-title" style="color: white;">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items ">
+            <a class="nav-link" href="../ADMIN/Serenazgo/tabla_serenazgo.html ">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Serenazgo</span>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="../ADMIN/Profesores/tabla_profesor.html">
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-teach"></i>
               </span>
-              <span class="menu-title" style="color: white;">Eventos</span>
+              <span class="menu-title" style="color: white;">Profesores</span>
             </a>
           </li>
+          <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../../index.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-nature-people"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
-              <span class="menu-title" style="color: white;">Incidencias</span>
+              <span class="menu-title vecinos" style="color: white;">Vecinos</span>
+              <i class="menu-arrow" style="color: white;"></i> 
             </a>
+            
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
+                
+                <li class="nav-item  "> <a class="nav-link" href="../ADMIN/Vecinos/Solicitudes a acceso/tabla_solicitudes.html" style="color: white;">
+                  <span class="menu-icon">
+                    <i class="mdi mdi-account-alert"></i>
+                  </span>
+                  Sol. de acceso</a></li>
+                <li class="nav-item "> <a class="nav-link " href="../ADMIN/Vecinos/Postulaciones a coordinacion/tabla_postulaciones.html" style="color: white;">
+                  <span class="menu-icon ">
+                    <i class="mdi mdi-account-alert "></i>
+                  </span>
+                  Sol. a coordinación</a></li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
             <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
@@ -95,23 +105,7 @@
               <span class="menu-title" style="color: white;">Cerrar sesión</span>
             </a>
           </li>
-          <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-              </span>
-              <span class="menu-title" style="color: white;">Lista</span>
-              <i class="menu-arrow" style="color: white;"></i> 
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
-                <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/buttons.html" style="color: white;">a</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/dropdowns.html" style="color: white;">b</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/typography.html" style="color: white;">c</a></li>
-              </ul>
-            </div>
-          </li>
+
           <!-- Codigo para un item de la barra lateral que SI tiene sublista FIN -->
         </ul>
       </nav>
@@ -150,13 +144,69 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper" style ="background-color: #fffff6;"> <!--Cambiar al color mas claro-->
-            
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:../../partials/_footer.html -->
-          <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
+                <div class="title-pp">
+                  <h2>Bienvenido Serenazgo Dispatcher!</h2>
+                </div>
+                <div  class="RowWrapper">
+                  <div class="row-1">
+                    <div class="card-1" style ="color:black;">
+                      <div class="font">
+                        <img src="adminn.jpg" alt="SanMiguel">
+                        <div class="card-content">
+                          <h3>¿Cuál es la función del serenazgo?</h3>
+                          <p>Al ser serenazgo, deberás velar por la seguridad de todos los vecinos sanmiguelinos y estar atento a las incidencias generadas por ellos para darles solución a tiempo real lo más rápido posible.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 style="color: black;">A continuación, podrás visualizar las funciones a realizar como Administrador.<br><span style="font-size: 14px;">Pase el mouse por las siguientes imágenes para más información.</span></h3>
+                  <div class = "container-rows">
+                    <div class="row-2">
+                      <div class="card-2" style ="color:black;" >
+                        <div class="font">
+                          <img src="vecinos.png" alt="Vecinos">
+                        </div>
+                        <div class="back" style="background-color: #f7d4d3; padding: 10px;">
+                          <span style="font-size: 16px;"> Podrás visualizar las lista de solicitudes de acceso a la plataforma y la lista de solicitudes a coordinador. 
+                            Debes estar atento a ellas para no dejar ninguna solicitud pendiente <br><span style="font-size: 10px; text-decoration: underline;">Haga click en el nombre Vecino Sanmiguelino para dirigirse automáticamente a las listas.</span></span>
+                            <img src="personas.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <a class="underline-hover" onclick="return mostrarPopupVecino()"; style="color: black; font-weight: bold;"> Vecino <br> Sanmiguelino </a>
+                      <div class="card-2" style ="color:black;">
+                        <div class="font">
+                          <img src="serenazgo.png" alt="Serenazgo">
+                        </div>
+                        <div class="back" style="background-color: #f7d4d3; padding: 10px;">
+                          <span style="font-size: 16px;"> Podrás visualizar la lista de serenazgos para organizar estratégicamente el personal de seguridad del distrito. <br><span style="font-size: 10px; text-decoration: underline;">Haga click en el nombre Serenazgo Dispatcher para dirigirse automáticamente a la lista.</span></span>
+                          <img src="insignia.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <a href="../ADMIN/Serenazgo/tabla_serenazgo.html" style="color: black; font-weight: bold;"> Serenazgo <br> Dispatcher</a>
+                      
+
+                    </div>
+                    <div class="row-3">
+                      <div class="card-3" style ="color:black;" >
+                        <div class="font">
+                          <img src="profesor.png" alt="Profesores">
+                        </div>
+                        <div class="back" style="background-color: #f7d4d3; padding: 10px;">
+                          <span style="font-size: 16px;"> Podrás visualizar las lista de profesores, donde podrás administrarlos y derivarlos para cada tipo de evento, ya sea para Cultura o Deporte  <br><span style="font-size: 10px; text-decoration: underline;">Haga click en el nombre Profesores para dirigirse automáticamente a la lista.</span></span>
+                          <img src="eventos.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div> 
+                      </div>
+                      <a href="../ADMIN/Profesores/tabla_profesor.html" style="color: black; font-weight: bold;">Profesores </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- content-wrapper ends -->
+              <!-- partial:../../partials/_footer.html -->
+              <!-- partial -->
+              
+            </div>
+            <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
     </div>
@@ -172,7 +222,7 @@
     <script src="../../../assets/js/misc.js"></script>
     <script src="../../../assets/js/settings.js"></script>
     <script src="../../../assets/js/todolist.js"></script>
-    <script src="../../../assets/js/paginas_principales.js"></script>
+    <script src="paginas_principales.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script>
@@ -193,6 +243,7 @@
         });
     }
     </script>
+    
     <!-- End custom js for this page -->
   </body>
 </html>
