@@ -1,280 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incidencias</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="../../../../assets/css/style.css"> <!-- Estilos globales -->
-    <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css"> <!-- Iconos -->
-    <link rel="stylesheet" href="../../../../assets/vendors/css/vendor.bundle.base.css"> <!-- Estilos base de plugins -->
-    <link rel="stylesheet" href="incidencia_vecino.css">
-    <style>
-     /* Estilos CSS para los mensajes de alerta */
-     .swal2-content,
-     .swal2-title {
-        color: black !important; /* Hacer el texto visible */  
-      }
- 
-     /* Estilos para el título y contenido personalizado del popup de alerta */
-    .swal-custom-title,
-    .swal-custom-content {
-        color: black; /* Color del texto */
-        font-size: 18px; /* Tamaño de fuente */
-        margin-bottom: 10px; /* Espacio inferior */
-    }
-
-/* Estilos personalizados para el título del popup de confirmación de cerrar sesión */
-    .swal2-title.swal-custom-title {
-       font-size: 28px; /* Aumento del tamaño de fuente */
-    }
-
-/* Estilo para hacer el texto "Cancelar" del botón rojo blanco */
-    .swal2-cancel {
-       color: white !important; /* Color del texto del botón cancelar */
-    }
-    </style>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Solicitud</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="styles_incidencia.css">
+    <link rel="stylesheet" href="../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../../../assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End Plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../LogoSM.png" />
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-scroller">
-        <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #225496;">
-            <!-- Contenido de la barra lateral -->
-            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #225496;"> <!--Cambiar al color mas oscuro-->
-                         <h3>Menú de navegación</h3>
-               
-                       </div>
-                       <ul class="nav">
-                         
-                         <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-                         <li class="nav-item menu-items">
-                           
-                           <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
-                             <span class="menu-icon">
-                               <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-                             </span>
-                             <span class="menu-title" style="color: white;">Pagina principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
-                           </a>
-                         </li>
-                         <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
-               
-                         
-                         <li class="nav-item menu-items">
-                           <a class="nav-link" href="../Miperfil.html">
-                             <span class="menu-icon">
-                               <i class="mdi mdi-playlist-play"></i>
-                             </span>
-                             <span class="menu-title" style="color: white;">Mi perfil</span>
-                           </a>
-                         </li>
-                         <li class="nav-item menu-items">
-                           <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
-                             <span class="menu-icon">
-                               <i class="mdi mdi-table-large"></i>
-                             </span>
-                             <span class="menu-title" style="color: white;">Correo</span>
-                           </a>
-                         </li>
-                         <li class="nav-item menu-items">
-                           <a class="nav-link" href="../solicitarCoordinador.html">
-                             <span class="menu-icon">
-                               <i class="mdi mdi-chart-bar"></i>
-                             </span>
-                             <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
-                           </a>
-                         </li>
-                         <li class="nav-item menu-items">
-                           <a class="nav-link" href="../eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
-                             <span class="menu-icon">
-                               <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-                             </span>
-                             <span class="menu-title" style="color: white;">Eventos</span>
-                           </a>
-                         </li>
-                         <li class="nav-item menu-items">
-                           <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
-                             <span class="menu-icon">
-                               <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-                             </span>
-                             <span class="menu-title" style="color: white;">Incidencias</span>
-                           </a>
-                         </li>
-                         <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
-                           <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
-                             <span class="menu-icon">
-                               <i class="mdi mdi-speedometer"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-                             </span>
-                             <span class="menu-title" style="color: white;">Cerrar sesión</span>
-                           </a>
-                         </li>
-                         <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
-                         <li class="nav-item menu-items">
-                           <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                             <span class="menu-icon">
-                               <i class="mdi mdi-laptop"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
-                             </span>
-                             <span class="menu-title" style="color: white;">Lista</span>
-                             <i class="menu-arrow" style="color: white;"></i> 
-                           </a>
-                           <div class="collapse" id="ui-basic">
-                             <ul class="nav flex-column sub-menu"><!-- Colocar items de la sublista -->
-                               <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/buttons.html" style="color: white;">a</a></li>
-                               <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/dropdowns.html" style="color: white;">b</a></li>
-                               <li class="nav-item"> <a class="nav-link" href="../../../pages/ui-features/typography.html" style="color: white;">c</a></li>
-                             </ul>
-                           </div>
-                         </li>
-                         <!-- Codigo para un item de la barra lateral que SI tiene sublista FIN -->
-                       </ul>
-                     </nav>
-                    
-                    </nav>
-        <div class="container-fluid page-body-wrapper">
-                         <nav class="navbar p-0 fixed-top d-flex flex-row">
-          
-                                                  <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #225496;"> <!--Cambiar al color mas oscuro-->
-                                                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                                                      <span class="mdi mdi-menu" style="color: white;"></span> <!--Cambiar el color de las 3 rayas de acuerdo a lo necesario (a negro en todo caso)-->
-                                                    </button>
-                                                    
-                                                    <ul class="navbar-nav navbar-nav-right">
-                                                      
-                                                      
-                                                      <li class="nav-item dropdown">
-                                                        <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
-                                                          <div class="navbar-profile">
-                                                            <div class="Header-nav-item">
-                                                              <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500;">Manuel Yarleque</h2>
-                                                              <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500;">Vecino sanmiguelino</h5>
-                                                            </div>
-                                                            <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
-                                                            
-                                                          </div>
-                                                        </a>
-                                                        
-                                                      </li>
-                                                    </ul>
-                                                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                                                      <span class="mdi mdi-format-line-spacing"></span>
-                                                    </button>
-                                                  </div>
-                                                </nav>
-            <div class="main-panel">
-                <div class="content-wrapper" style="background-color: #9bbee8;">
-                    <div class="container">
-                         <div class="card">
-                                                  <div style="display: flex; justify-content: space-between;">
-                                                    <div style="display: flex; justify-content: space-between; gap: 20px">
-                                                        <div style="display: flex; flex-direction: column;">
-                                                            <h2 class="tabla-title">Incidencias</h2>
-                                                        </div>
-                                                    </div>
-                                                  </div> 
-                                                  <table id="miTabla" class="display">
-                                                    <thead style="background-color: white;">
-                                                        <tr>
-                                                            <th>Descripción</th>
-                                                            <th>Fecha del incidente</th>
-                                                            <th>Estado</th>
-                                                            <th style="width: 20px;"></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody style="text-align: center;">
-                                                        <tr style="text-align: center;">
-                                                            <td>Asalto a la altura de la puerta Riva Agüero de la PUCP</a></td>
-                                                            <td>12/04/2024</a></td>
-                                                            <td>Resuelto</td>
-                                                            <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Robo en el parque Juan Pablo II</a></td>
-                                                            <td>13/03/2024</a></td>
-                                                            <td>Pendiente</td>
-                                                            <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Escape de los leones del Parque de las Leyendas</a></td>
-                                                            <td>11/01/2024</a></td>
-                                                            <td>Resuelto</td>
-                                                            <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
-                                                            <td>10/04/2024</a></td>
-                                                            <td>Resuelto</td>
-                                                            <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Choque en el cruce de las avenidas Universitaria con La Marina</a></td>
-                                                            <td>22/04/2024</a></td>
-                                                            <td>Pendiente</td>
-                                                            <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
-                                                          <td>10/04/2024</a></td>
-                                                          <td>Resuelto</td>
-                                                          <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
-                                                          <td>10/04/2024</a></td>
-                                                          <td>Resuelto</td>
-                                                          <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
-                                                          <td>10/04/2024</a></td>
-                                                          <td>Resuelto</td>
-                                                          <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
-                                                          <td>10/04/2024</a></td>
-                                                          <td>Resuelto</td>
-                                                          <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</td>
-                                                          <td>10/04/2024</td>
-                                                          <td>Resuelto</td>
-                                                          <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
-                                                          <td>10/04/2024</a></td>
-                                                          <td>Resuelto</td>
-                                                          <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-plus"></i> </span></a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                  </table>
-                                                
-                                                
-                                                </div>
-                                                <div class ="container-boton">
-                                                  <a href="registrar_incidencia.html"><button class="addIncidencia" >Registrar incidencia</button></a>
-                                                </div>       
-                                              </div>
-
-                    </div>
-                </div>
-            </div>
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
+        
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
+          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
         </div>
-    </div>
+        
+        
+        <ul class="nav">
+           
+          <!-- Codigo para un item de la barra lateral que no tiene sublista -->
+          <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
+            
+            <a class="nav-link" href="../../PRINCIPAL/pagina_principal_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+              <span class="menu-icon">
+                <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+              </span>
+              <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
+            </a>
+          </li>
+          <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
 
+          
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../Miperfil.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-account"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Mi perfil</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox">
+              <span class="menu-icon">
+                <i class="mdi mdi-email"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Correo</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../solicitarCoordinador.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-key-change"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+              <span class="menu-icon">
+                <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+              </span>
+              <span class="menu-title" style="color: white;">Eventos</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items active">
+            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+              <span class="menu-icon">
+                <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+              </span>
+              <span class="menu-title" style="color: white;">Incidencias</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
+            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+              <span class="menu-icon">
+                <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+              </span>
+              <span class="menu-title" style="color: white;">Cerrar sesión</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_navbar.html -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #000f22"> <!--Cambiar al color mas oscuro-->
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu" style="color: white;"></span> <!--Cambiar el color de las 3 rayas de acuerdo a lo necesario (a negro en todo caso)-->
+            </button>
+            
+            <ul class="navbar-nav navbar-nav-right">
+              
+        
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                    <div class="Header-nav-item">
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarleque</h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Vecino sanmiguelino</h5>
+                    </div>
+                    <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
+                    
+                  </div>
+                </a>
+                
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper" style ="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
+            <!--CONTENIDO-->
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <h2 class="tabla-title" style="color: #000f22; margin-bottom: 0px;">Incidencias</h2>
+              <button class="btnTable" style="display: flex; align-items: center;" onclick="window.location.href='registrar_incidencia.html';">
+                  Agregar Incidencia
+                  <a class="mdi mdi-plus" style="color: #ffffff; font-size: 20px; margin-left: 5px;"></a>
+              </button>
+          </div>
+          
+
+
+            <table id="miTabla" class="table" style="margin-bottom:15px;">
+              <thead style="background-color: #000f22;"> <!--Cambiar al color de fondo (claro) de la pagina, pero un poco mas oscuro-->
+                <tr style="text-align: center; font-weight:800;">
+                  <th style ="color: white;">Descripción</th>
+                  <th style ="color: white;">Fecha</th>
+                  <th style ="color: white;">Estado</th>
+                  <th style="width: 20px; color: white;"></th>
+                </tr>
+              </thead>
+              <tbody style="text-align: center; color: black;">
+                <tr style="text-align: center;">
+                  <td>Asalto a la altura de la puerta Riva Agüero de la PUCP</a></td>
+                  <td>12/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Robo en el parque Juan Pablo II</a></td>
+                  <td>13/03/2024</a></td>
+                  <td>Pendiente</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Escape de los leones del Parque de las Leyendas</a></td>
+                  <td>11/01/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Choque en el cruce de las avenidas Universitaria con La Marina</a></td>
+                  <td>22/04/2024</a></td>
+                  <td>Pendiente</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</td>
+                  <td>10/04/2024</td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+                <tr>
+                  <td>Lab2 de IWEB y GTICS (los patos abusaron de los alumnos)</a></td>
+                  <td>10/04/2024</a></td>
+                  <td>Resuelto</td>
+                  <td><a href="incidencia_info.html"><span class="menu-icon"><i class="mdi mdi-eye"></i> </span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="../../../../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -287,77 +245,28 @@
     <script src="../../../../assets/js/settings.js"></script>
     <script src="../../../../assets/js/todolist.js"></script>
     <!-- endinject -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src="incidencia1.js"></script>
+    <!-- Custom js for this page -->
     <script>
-        $(document).ready(function() {
-            var table = $('#miTabla').DataTable({
-                "pageLength": 5,
-                "lengthChange": false,
-                "language": {
-                    "emptyTable": "No hay registros disponibles",
-                    "zeroRecords": "No se encontraron registros coincidentes",
-                    "infoEmpty": "Mostrando 0 a 0 de 0 entradas",
-                    "paginate": {
-                        "first": "Primero",
-                        "last": "Último",
-                        "next": "Siguiente",
-                        "previous": "Anterior"
-                    },
-                    "info": "Mostrando de _START_ a _END_ de _TOTAL_ entradas",
-                    "search": "Buscar:"
-                }
-            });
-        });
-        function Eliminacion() {
-                         Swal.fire({
-                                   title: "Estás seguro?",
-                                   text: "Una vez eliminado, la información asociada al personal será permanentemente eliminada del sistema",
-                                   icon: "warning",
-                                   showCancelButton: true,
-                                   confirmButtonColor: "#00913f",
-                                   cancelButtonColor: "#d33",
-                                   confirmButtonText: "Si, eliminar"
-                               }).then((result) => {
-                                   if (result.isConfirmed) {
-                                       Swal.fire({
-                                           title: "Eliminado!",
-                                           text: "El personal ha sido eliminado con éxito",
-                                           icon: "success"
-                                       }).then(() => {
-                                           window.location.href = "incidencias_coordinador.html";
-                                       });
-                                   }
-                               });
-                 
-                               // Evitar que el formulario se envíe automáticamente
-                               return false;
-                         }
-
-                         
       function mostrarPopupCerrarSesion() {
         Swal.fire({
-          title: '¿Estás seguro de que deseas cerrar sesión?',
-          text: 'Este proceso será irreversible',
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#00913f',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Sí, cerrar sesión',
-          cancelButtonText: 'Cancelar', // Cambio realizado aquí
-          customClass: {
-            title: 'swal2-title',
-            content: 'swal2-content',
-        }
+            title: 'Cerrar sesión',
+            text: '¿Estás seguro de que deseas cerrar sesión?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#00913f',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, cerrar sesión',
+            cancelButtonText: 'Cancelar'
         }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = "../../LOGIN/login.html"; // Cambiar la ubicacion del login de acuerdo a lo necesario
-          }
+            if (result.isConfirmed) {
+                window.location.href = "../../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+            }
         });
-      }
-
-
+    }
     </script>
-</body>
+    <!-- End custom js for this page -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src ="script_incidencia.js"></script>
+  </body>
 </html>
