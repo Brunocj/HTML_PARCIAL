@@ -131,16 +131,35 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style ="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
+          <div class="content-wrapper" style="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
             <!--CONTENIDO-->
-            <!--Daniel se encarga XD-->
-            <h1 style="color:black;">DANIEL CHAMBEA</h1>
-            <h1 style="color:black;">TODO MURIO CON EL CAMBIO DE PLANTILLA</h1>
-
+            <div class="container_sol">
+              <div class="card_sol">
+                <div class="coord-card">
+                  <p>¡Únete a nuestro equipo de coordinadores y marca la diferencia! ¿En qué área te gustaría brillar como coordinador? Cuenta con 2 opciones: deportes y cultura.</p>
+                  <div class="img-select">
+                    <div class="select">
+                      <label>
+                        <input type="radio" name="opcion" value="deportes" onchange="showCards(this.value)"> Deportes
+                      </label>
+                      <label>
+                        <input type="radio" name="opcion" value="cultura" onchange="showCards(this.value)"> Cultura
+                      </label>
+                      <button class="beautiful-button" onclick="mostrarAlerta()">Enviar solicitud</button>
+                    </div>
+                    <div id="cards-container" class="cards-container">
+                      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                      <div class="cards-wrapper" id="cards-wrapper">
+                        <!-- Las cartas se insertarán aquí dinámicamente -->
+                      </div>
+                      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- content-wrapper ends -->
-          <!-- partial:../../partials/_footer.html -->
-          <!-- partial -->
         </div>
         <!-- main-panel ends -->
       </div>
@@ -177,6 +196,110 @@
             }
         });
     }
+    </script>
+    <script>
+      function mostrarAlerta() {
+        Swal.fire({
+            title: '¿Estás seguro de que quieres enviar la solicitud?',
+            text: 'Este proceso será irreversible',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#00913f',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, enviar solicitud',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Aquí iría el código para enviar la solicitud
+                Swal.fire(
+                    '¡Solicitud enviada!',
+                    'La solicitud ha sido enviada correctamente.',
+                    'success'
+                );
+            } else {
+                // El usuario ha cancelado la acción
+                Swal.fire(
+                    'Solicitud cancelada',
+                    '',
+                    'info'
+                );
+            }
+        });
+      }
+    </script>
+    <script>
+      function showImage(opcion) {
+        var imagenContainer = document.getElementById("imagen-container");
+        if (opcion === "deportes") {
+          imagenContainer.innerHTML = '<img src="imagen_deportes.jpg" alt="Deportes">';
+        } else if (opcion === "cultura") {
+          imagenContainer.innerHTML = '<img src="imagen_cultura.jpg" alt="Cultura">';
+        }
+      }
+    </script>
+
+    <script>
+      let currentSlide = 0;
+
+      function showCards(opcion) {
+        const cardsWrapper = document.getElementById('cards-wrapper');
+        let cardsHTML = '';
+        
+        if (opcion === 'deportes') {
+          cardsHTML = `
+          <div class="card">
+            <img src="imagen_cultura.jpg" alt="Deportes">
+            <h2>Organiza Eventos Deportivos</h2>
+            <p>En esta área de deportes, tendrás la oportunidad de organizar diversos eventos deportivos que fomenten la participación y el espíritu de equipo.</p>
+          </div>
+          <div class="card">
+            <img src="imagen_deportes.jpg" alt="Profesores de Deportes">
+            <h2>Elige a tus Profesores</h2>
+            <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, adaptados a las necesidades y preferencias de los participantes.</p>
+          </div>
+          <div class="card">
+            <img src="deporte3.jpg" alt="Ejemplos de Deportes">
+            <h2>Inspírate en Ejemplos</h2>
+            <p>Algunos ejemplos de actividades que puedes organizar incluyen torneos de fútbol, clases de yoga en el parque, y competiciones de atletismo, entre otros.</p>
+          </div>
+          `;
+        } else if (opcion === 'cultura') {
+          cardsHTML = `
+          <div class="card">
+            <img src="cultura1.jpg" alt="Cultura 1">
+            <h2>Cultura 1</h2>
+            <p>Descripción de la cultura 1</p>
+          </div>
+          <div class="card">
+            <img src="cultura2.jpg" alt="Cultura 2">
+            <h2>Cultura 2</h2>
+            <p>Descripción de la cultura 2</p>
+          </div>
+          <div class="card">
+            <img src="cultura3.jpg" alt="Cultura 3">
+            <h2>Cultura 3</h2>
+            <p>Descripción de la cultura 3</p>
+          </div>
+          `;
+        }
+        
+        cardsWrapper.innerHTML = cardsHTML;
+        currentSlide = 0;
+        updateSlide();
+      }
+
+      function changeSlide(direction) {
+        const cardsWrapper = document.getElementById('cards-wrapper');
+        const totalSlides = cardsWrapper.children.length;
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        updateSlide();
+      }
+
+      function updateSlide() {
+        const cardsWrapper = document.getElementById('cards-wrapper');
+        const cardWidth = cardsWrapper.children[0].offsetWidth;
+        cardsWrapper.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+      }
     </script>
     <!-- End custom js for this page -->
   </body>
