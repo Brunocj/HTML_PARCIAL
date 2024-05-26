@@ -133,17 +133,18 @@
         <div class="main-panel">
           <div class="content-wrapper" style="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
             <!--CONTENIDO-->
-            <div class="container_sol">
+            <h1 style="font-weight: bold; color: black;">Solicitud a coordinador(a):</h1>
+            <div class="container_sol" style="margin-top: -50px;">
               <div class="card_sol">
                 <div class="coord-card">
-                  <p>¡Únete a nuestro equipo de coordinadores y marca la diferencia! ¿En qué área te gustaría brillar como coordinador? Cuenta con 2 opciones: deportes y cultura.</p>
+                  <p style="font-size: 20px;">¡Únete a nuestro equipo de coordinadores y marca la diferencia! ¿En qué área te gustaría brillar como coordinador? Cuenta con 2 opciones: deportes y cultura.</p>
                   <div class="img-select">
                     <div class="select">
                       <label>
-                        <input type="radio" name="opcion" value="deportes" onchange="showCards(this.value)"> Deportes
+                        <input type="radio" name="opcion" value="deportes" onchange="showCards(this.value); checkOptionSelected();"> Deportes
                       </label>
                       <label>
-                        <input type="radio" name="opcion" value="cultura" onchange="showCards(this.value)"> Cultura
+                        <input type="radio" name="opcion" value="cultura" onchange="showCards(this.value); checkOptionSelected();"> Cultura
                       </label>
                       <button class="beautiful-button" onclick="mostrarAlerta()">Enviar solicitud</button>
                     </div>
@@ -248,17 +249,17 @@
         if (opcion === 'deportes') {
           cardsHTML = `
           <div class="card">
-            <img src="imagen_cultura.jpg" alt="Deportes">
+            <img src="deportes1.png" alt="Deportes">
             <h2>Organiza Eventos Deportivos</h2>
             <p>En esta área de deportes, tendrás la oportunidad de organizar diversos eventos deportivos que fomenten la participación y el espíritu de equipo.</p>
           </div>
           <div class="card">
-            <img src="imagen_deportes.jpg" alt="Profesores de Deportes">
+            <img src="deportes2.jpg" alt="Profesores de Deportes">
             <h2>Elige a tus Profesores</h2>
-            <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, adaptados a las necesidades y preferencias de los participantes.</p>
+            <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, con toda la voluntad de atender a las necesidades y preferencias de los participantes.</p>
           </div>
           <div class="card">
-            <img src="deporte3.jpg" alt="Ejemplos de Deportes">
+            <img src="imagen_deportes.jpg" alt="Ejemplos de Deportes">
             <h2>Inspírate en Ejemplos</h2>
             <p>Algunos ejemplos de actividades que puedes organizar incluyen torneos de fútbol, clases de yoga en el parque, y competiciones de atletismo, entre otros.</p>
           </div>
@@ -266,19 +267,19 @@
         } else if (opcion === 'cultura') {
           cardsHTML = `
           <div class="card">
-            <img src="cultura1.jpg" alt="Cultura 1">
-            <h2>Cultura 1</h2>
-            <p>Descripción de la cultura 1</p>
+            <img src="imagen_cultura.jpg" alt="Cultura 1">
+            <h2>Organiza Eventos Culturales</h2>
+            <p>En esta área de cultura, tendrás la oportunidad de organizar eventos culturales que promuevan la creatividad y la apreciación artística. </p>
           </div>
           <div class="card">
             <img src="cultura2.jpg" alt="Cultura 2">
             <h2>Cultura 2</h2>
-            <p>Descripción de la cultura 2</p>
+            <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes disciplinas artísticas, con toda la voluntad de atender a las necesidades y preferencias de los participantes.</p>
           </div>
           <div class="card">
             <img src="cultura3.jpg" alt="Cultura 3">
-            <h2>Cultura 3</h2>
-            <p>Descripción de la cultura 3</p>
+            <h2>Inspírate en Ejemplos</h2>
+            <p>Algunos ejemplos de actividades que puedes organizar incluyen exposiciones de arte, talleres de teatro, y clases de música, entre otros.</p>
           </div>
           `;
         }

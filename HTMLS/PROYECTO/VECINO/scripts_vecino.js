@@ -83,3 +83,16 @@ const menuToggle = document.getElementById('menuToggle');
         });
       }
 
+      function checkOptionSelected() {
+        const deportesOption = document.querySelector('input[name="opcion"][value="deportes"]');
+        const culturaOption = document.querySelector('input[name="opcion"][value="cultura"]');
+        const button = document.querySelector('.beautiful-button');
+      
+        if (deportesOption.checked || culturaOption.checked) {
+          button.classList.remove('no-option-selected');
+          button.classList.add('option-selected');
+        } else {
+          button.classList.remove('option-selected');
+          button.classList.add('no-option-selected');
+        }
+      }
