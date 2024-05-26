@@ -4,9 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Página Principal Coordinador</title>
+    <title>Página Principal Vecino</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="styles_pag_principales.css">
+    <link rel="stylesheet" href="../PRINCIPAL/styles_pag_principales.css">
     <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
@@ -36,7 +36,7 @@
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items active"> <!-- la clase "active" solo se usa para la vista que está activa -->
             
-            <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\pagina_principal_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -44,10 +44,9 @@
             </a>
           </li>
           <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
-
-          
-          <li class="nav-item menu-items ">
-            <a class="nav-link" href="../COORDINADOR/Miperfil.html">
+          <!-- Codigo para un item de la barra lateral que no tiene sublista -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="Miperfil.html">
               <span class="menu-icon">
                 <i class="mdi mdi-account"></i>
               </span>
@@ -63,15 +62,23 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../COORDINADOR/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="solicitarCoordinador.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-key-change"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Sol. coordinador(a)</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
           </li>
-          <li class="nav-item menu-items ">
-            <a class="nav-link" href="../COORDINADOR/Incidencias/incidencia_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="incidencias/incidencia_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -79,7 +86,7 @@
             </a>
           </li>
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
-            <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\LOGIN\login.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -107,8 +114,8 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrián López</h2>
-                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de San Miguel, Lima</h5>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarlequé</h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Vecino sanmiguelino</h5>
                     </div>
                     <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
@@ -124,48 +131,93 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style ="background-color: #bdf1f5;"> <!--Cambiar al color mas claro-->
+          <div class="content-wrapper" style ="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
                 <div class="title-pp">
-                  <h2>Bienvenido Coordinador Adrián!</h2>
+                  <h2>Bienvenido Vecino San Miguelino!</h2>
                 </div>
                 <div  class="RowWrapper">
                   <div class="row-1">
                     <div class="card-1" style ="color:black;">
                       <div class="font">
-                        <img src="adminn.jpg" alt="SanMiguel">
+                        <img src="../PRINCIPAL/adminn.jpg" alt="SanMiguel">
                         <div class="card-content">
-                          <h3>¿Cuál es la función del coordinador?</h3>
-                          <p>Al ser coordinador, podrás organizar distintos eventos relacionados a tu área, la cual puede ser de cultura o de deportes.</p>
+                          <h3>¿Cuál es tu función como vecino?</h3>
+                          <p>Tu función como vecino se basa en brindar todo tu apoyo para mantener un ambiente armonioso y agradable en nuestro distrito. </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <h3 style="color: black;">A continuación, podrás visualizar a detalle las funciones que puedes realizar como Coordinador.<br><span style="font-size: 14px;">Pase el mouse por las siguientes imágenes para más información.</span></h3>
-                  <div class = "container-rows" style = "height: 350px;">
-                    <div class="row-2">
-                      <div class="card-2" style ="color:black;">
-                        <div class="font">
-                          <img src="eventoo.png" alt="Eventos">
-                        </div>
-                        <div class="back" style="padding: 10px;">
-                          <span style="font-size: 16px;"> Podrás visualizar la sección de eventos para que puedas crear un nuevo evento, revisar algunos detalles de tus eventos creados y visualizar eventos pasados que quieras tomar como referencia.<br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Sección eventos" para dirigirse automáticamente a la sección de eventos.</span></span>
-                          <img src="eventos_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
-                        </div>
+                  <div class="row-2">
+                    <div class="card-ma" style ="color:black;" >
+                      <div class="font">
+                        <img src="../PRINCIPAL/medio_ambiente_vecino.png" alt="Cuidado Ambientes" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        <span style="font-size: 16px; font-weight: bold;">¡Cuidemos nuestras áreas verdes para una mejor imagen de nuestra comunidad!</span>
                       </div>
-                      <a href="../VECINO/eventos/eventos.html" style="color: black; font-weight: bold;"> Sección <br> Eventos</a>
-                      <div class="card-3" style ="color:black;" >
-                        <div class="font">
-                          <img src="registro_incidencia.png" alt="Incidencias">
-                        </div>
-                        <div class="back" style="padding: 10px;">
-                          <span style="font-size: 16px;"> Podrás visualizar la lista de incidencias donde podrás registrar una incidencia si has sufrido o visto algún problema en el distrito.<br><span style="color: red;">No olvides que serás penalizado si registras más de 5 falsas alarmas.</span> <br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Registrar Incidencia" para dirigirse automáticamente a la lista de incidencias.</span></span>
-                          <img src="incidencia_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
-                        </div> 
+                      <div class="back" style="background-color: white; padding: 10px;">
+                        <span style="font-size: 16px;"> Ayúdanos a mantener nuestros distintos ambientes libres de basura.</span>
+                          <img src="../PRINCIPAL/no_botar_basura.png" alt="No Botar Basura" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
                       </div>
-                      <a href="../VECINO/incidencias/incidencia_vecino.html" style="color: black; font-weight: bold;">Registrar <br> Incidencia </a>
-                      
-
                     </div>
+                    <div class="card-mv" style ="color:black;">
+                      <div class="font">
+                        <img src="../PRINCIPAL/unidad_vecinal_1.png" alt="Vecinos">
+                        <span style="font-size: 16px; font-weight: bold;">¡Consolidemos nuestra unión como distrito apoyándonos unos a otros!</span>
+                      </div>
+                      <div class="back" style="background-color: white; padding: 10px;">
+                        <span style="font-size: 16px;"> Avisemos cualquier problema o inconveniente que observemos, así no seamos nosotros los afectados.</span>
+                          <img src="../PRINCIPAL/unidad_vecinal_2.png" alt="Small Image" style= "max-width: 100%; max-height: 100px; margin-top: 10px;">
+                      </div>
+                    </div>
+                  </div>
+                  <h3 style="color: black; padding: 25px; margin-bottom: -20px;">A continuación, podrás visualizar las acciones que puedes realizar en la plataforma como vecino.<br><span style="font-size: 14px;">Pase el mouse por las siguientes imágenes para más información.</span></h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card-2">
+                        <div class="font">
+                          <img src="../PRINCIPAL/solicitud2.png" alt="Solicitud Coordinador">
+                        </div>
+                        <div class="back" style="padding: 10px;">
+                          <span style="font-size: 16px; color: black;"> Podrás enviar una solicitud al administrador para volverte coordinador de una de las dos áreas y comenzar a organizar eventos. <br>
+                            <span style="font-size: 10px; text-decoration: underline;">Haga click en "Solicitud para coordinador" para dirigirse automáticamente a la página de la solicitud.</span>
+                          </span>
+                          <img src="../PRINCIPAL/solicitud_2.png" alt="Small Image" style="max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <div class="card-name">
+                        <a href="solicitarCoordinador.html" style="color: black; font-weight: bold;"> Solicitud para <br> Coordinador</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card-2">
+                        <div class="font">
+                          <img src="../PRINCIPAL/eventoo.png" alt="Eventos">
+                        </div>
+                        <div class="back" style="padding: 10px;">
+                          <span style="font-size: 16px; color: black;"> Podrás visualizar la lista de eventos para que puedas inscribirte y participar en los eventos que te agraden.<br>
+                            <span style="font-size: 10px; text-decoration: underline;">Haga click en "Visualizar eventos" para dirigirse automáticamente a la lista de eventos.</span>
+                          </span>
+                          <img src="../PRINCIPAL/eventos_2.png" alt="Small Image" style="max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <div class="card-name">
+                        <a href="eventos/eventos.html" style="color: black; font-weight: bold;"> Visualizar <br> Eventos</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card-2">
+                        <div class="font">
+                          <img src="../PRINCIPAL/registro_incidencia.png" alt="Incidencias">
+                        </div>
+                        <div class="back" style="padding: 10px;">
+                          <span style="font-size: 16px; color: black;"> Podrás visualizar la lista de incidencias donde podrás registrar una incidencia si has sufrido o visto algún problema en el distrito.<br><span style="color: red;">No olvides que serás penalizado si registras más de 5 falsas alarmas.</span>
+                            <span style="font-size: 10px; text-decoration: underline;">Haga click en "Registrar Incidencia" para dirigirse automáticamente a la lista de incidencias.</span>
+                          </span>
+                          <img src="../PRINCIPAL/incidencia_2.png" alt="Small Image" style="max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <div class="card-name">
+                        <a href="incidencias/incidencia_vecino.html" style="color: black; font-weight: bold;">Registrar <br> Incidencia </a>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -190,7 +242,7 @@
     <script src="../../../assets/js/misc.js"></script>
     <script src="../../../assets/js/settings.js"></script>
     <script src="../../../assets/js/todolist.js"></script>
-    <script src="paginas_principales.js"></script>
+    <script src="../PRINCIPAL/paginas_principales.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script>

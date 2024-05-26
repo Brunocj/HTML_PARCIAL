@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Página Principal Coordinador</title>
     <!-- plugins:css -->
+    <link rel="stylesheet" href="../PRINCIPAL/styles_pag_principales.css">
     <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="../../../assets/css/styles_pag_principales.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End Plugin css for this page -->
@@ -16,7 +16,6 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="styles_pagina_principal.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../LogoSM.png" />
     <!--JS para los popups-->
@@ -29,7 +28,7 @@
         
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
           <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
-          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;"></h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
         </div>
         
         
@@ -48,7 +47,7 @@
 
           
           <li class="nav-item menu-items ">
-            <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\Miperfil.html">
+            <a class="nav-link" href="Miperfil.html">
               <span class="menu-icon">
                 <i class="mdi mdi-account"></i>
               </span>
@@ -63,8 +62,8 @@
               <span class="menu-title" style="color: white;">Correo</span>
             </a>
           </li>
-          <li class="nav-item menu-items ">
-            <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="Eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -72,7 +71,7 @@
             </a>
           </li>
           <li class="nav-item menu-items ">
-            <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\COORDINADOR\Incidencias\incidencia_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="Incidencias/incidencia_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
@@ -80,13 +79,15 @@
             </a>
           </li>
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
-            <a class="nav-link" href="C:\Users\eduar\Documents\GitHub\HTML_PARCIAL\HTMLS\PROYECTO\LOGIN\login.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
               </span>
               <span class="menu-title" style="color: white;">Cerrar sesión</span>
             </a>
           </li>
+
+          <!-- Codigo para un item de la barra lateral que SI tiene sublista FIN -->
         </ul>
       </nav>
       <!-- partial -->
@@ -106,8 +107,8 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrian López</h2>
-                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de Cultura</h5>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrián López</h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de San Miguel, Lima</h5>
                     </div>
                     <img class="img-xs rounded-circle" src="../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
@@ -123,27 +124,63 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style ="background-color: #b4e6bc;"> <!--Cambiar al color mas claro-->
-            <div class="card2">
-              <div class="cont-img">
-                <img src="../sanMiguel.png" alt="Imagen San Miguel">
-              </div>
-              <div class="cont-main">
-                <div class="cont-text">
-                  <h1>¡ Bienvenido, Coordinador Sanmiguelino !</h1>
-                  <h3>¡Tu creatividad y dedicación son clave para un distrito vibrante! Este es tu espacio para planificar y organizar eventos que deleiten a nuestra comunidad, así como para gestionar incidencias locales.  </h3>
-                  <h3>¡Adelante y haz que cada evento sea memorable, mientras trabajamos juntos para abordar las necesidades de nuestra comunidad!</h3>
+          <div class="content-wrapper" style ="background-color: #bdf1f5;"> <!--Cambiar al color mas claro-->
+                <div class="title-pp">
+                  <h2>Bienvenido Coordinador Adrián!</h2>
                 </div>
+                <div  class="RowWrapper">
+                  <div class="row-1">
+                    <div class="card-1" style ="color:black;">
+                      <div class="font">
+                        <img src="../PRINCIPAL/adminn.jpg" alt="SanMiguel">
+                        <div class="card-content">
+                          <h3>¿Cuál es la función del coordinador?</h3>
+                          <p>Al ser coordinador, podrás organizar distintos eventos relacionados a tu área, la cual puede ser de cultura o de deportes.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 style="color: black;">A continuación, podrás visualizar a detalle las funciones que puedes realizar como Coordinador.<br><span style="font-size: 14px;">Pase el mouse por las siguientes imágenes para más información.</span></h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card-2">
+                        <div class="font">
+                          <img src="../PRINCIPAL/eventoo.png" alt="Eventos">
+                        </div>
+                        <div class="back" style="padding: 10px;">
+                          <span style="font-size: 16px; color: black;"> Podrás visualizar la sección de eventos para que puedas crear un nuevo evento, revisar algunos detalles de tus eventos creados y visualizar eventos pasados que quieras tomar 
+                            como referencia.<br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Sección eventos" para dirigirse automáticamente a la sección de eventos.</span></span>
+                          </span>
+                          <img src="../PRINCIPAL/eventos_2.png" alt="Small Image" style="max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <div class="card-name">
+                        <a href="Eventos/eventos.html" style="color: black; font-weight: bold;"> Sección <br> Eventos</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card-2">
+                        <div class="font">
+                          <img src="../PRINCIPAL/registro_incidencia.png" alt="Incidencias">
+                        </div>
+                        <div class="back" style="padding: 10px;">
+                          <span style="font-size: 16px; color: black;"> Podrás visualizar la lista de incidencias donde podrás registrar una incidencia si has sufrido o visto algún problema en el distrito.<br><span style="color: red;">No olvides que serás penalizado si registras
+                             más de 5 falsas alarmas.</span> <br><span style="font-size: 10px; text-decoration: underline;">Haga click en "Registrar Incidencia" para dirigirse automáticamente a la lista de incidencias.</span></span>
+                          <img src="../PRINCIPAL/incidencia_2.png" alt="Small Image" style="max-width: 100%; max-height: 100px; margin-top: 10px;">
+                        </div>
+                      </div>
+                      <div class="card-name">
+                        <a href="Incidencias/incidencia_coordinador.html" style="color: black; font-weight: bold;">Registrar <br> Incidencia </a>
+                    </div>
               </div>
             </div>
-            
-            
           </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:../../partials/_footer.html -->
-          <!-- partial -->
+              <!-- content-wrapper ends -->
+              <!-- partial:../../partials/_footer.html -->
+              <!-- partial -->
+              
         </div>
-        <!-- main-panel ends -->
+            <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
     </div>
@@ -159,7 +196,7 @@
     <script src="../../../assets/js/misc.js"></script>
     <script src="../../../assets/js/settings.js"></script>
     <script src="../../../assets/js/todolist.js"></script>
-    <script src="../../../assets/js/paginas_princpales.js"></script>
+    <script src="../PRINCIPAL/paginas_principales.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script>
@@ -171,7 +208,8 @@
             showCancelButton: true,
             confirmButtonColor: '#00913f',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, cerrar sesión'
+            confirmButtonText: 'Sí, cerrar sesión',
+            cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = "../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
@@ -179,6 +217,7 @@
         });
     }
     </script>
+    
     <!-- End custom js for this page -->
   </body>
 </html>
