@@ -19,6 +19,19 @@
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .card-animation {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
       .cards-container {
         position: relative;
         width: 100%;
@@ -57,11 +70,11 @@
       }
 
       .prev {
-        left: 10px;
+        left: 70px;
       }
 
       .next {
-        right: 10px;
+        right: 70px;
       }
 
       .hidden {
@@ -167,7 +180,7 @@
           <div class="content-wrapper" style="background-color: #d6e9ff;">
             <!--CONTENIDO-->
             <h1 style="font-weight: bold; color: black;">Solicitud a coordinador(a):</h1>
-            <div class="container_sol" style="margin-top: -50px;">
+            <div class="container_sol" style="margin-top: -30px;">
               <div class="card_sol">
                 <div class="coord-card">
                   <p style="font-size: 20px;">¡Únete a nuestro equipo de coordinadores y marca la diferencia! ¿En qué área te gustaría brillar como coordinador? Cuenta con 2 opciones: deportes y cultura.</p>
@@ -183,17 +196,17 @@
                     </div>
                     <div id="cards-container" class="cards-container">
                       <button id="prev" class="nav-button prev hidden" onclick="changeSlide(-1)">&#10094;</button>
-                      <div class="card" id="card1">
+                      <div class="card card-animation" id="card1">
                         <img src="deportes1.png" alt="Deportes">
                         <h2>Organiza Eventos Deportivos</h2>
                         <p>En esta área de deportes, tendrás la oportunidad de organizar diversos eventos deportivos que fomenten la participación y el espíritu de equipo.</p>
                       </div>
-                      <div class="card" id="card2">
+                      <div class="card card-animation" id="card2">
                         <img src="deportes2.jpg" alt="Profesores de Deportes">
                         <h2>Elige a tus Profesores</h2>
                         <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, con toda la voluntad de atender a las necesidades y preferencias de los participantes.</p>
                       </div>
-                      <div class="card" id="card3">
+                      <div class="card card-animation" id="card3">
                         <img src="imagen_deportes.jpg" alt="Ejemplos de Deportes">
                         <h2>Inspírate en Ejemplos</h2>
                         <p>Algunos ejemplos de actividades que puedes organizar incluyen torneos de fútbol, clases de yoga en el parque, y competiciones de atletismo, entre otros.</p>
@@ -306,7 +319,8 @@
 
       function showCards(opcion) {
         const cardElements = document.querySelectorAll('.card');
-        cardElements.forEach(card => card.classList.remove('active'));
+        cardElements.forEach(card => {card.classList.remove('active');
+    card.classList.add('card-animation');});
 
         currentSlide = 0;
 
