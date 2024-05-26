@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End Plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
@@ -20,33 +18,74 @@
     <link rel="shortcut icon" href="LogoSM.png" />
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      .cards-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .card {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: white;
+        text-align: center;
+      }
+
+      .card.active {
+        display: flex;
+      }
+
+      .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
-        
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
           <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
           <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
         </div>
-        
-        
         <ul class="nav">
-          
-          <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-          <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
-            
-            <a class="nav-link" href="../PRINCIPAL/pagina_principal_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../PRINCIPAL/pagina_principal_vecino.html">
               <span class="menu-icon">
-                <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-home"></i>
               </span>
-              <span class="menu-title" style="color: white;">Página principal</span> <!-- Cambiar color de texto de acuerdo a lo necesario -->
+              <span class="menu-title" style="color: white;">Página principal</span>
             </a>
           </li>
-          <!-- Codigo para un item de la barra lateral que no tiene sublista FIN-->
-
-          
           <li class="nav-item menu-items">
             <a class="nav-link" href="Miperfil.html">
               <span class="menu-icon">
@@ -72,25 +111,25 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="eventos/eventos.html">
               <span class="menu-icon">
-                <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-earth"></i>
               </span>
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="incidencias/incidencia_vecino.html"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="incidencias/incidencia_vecino.html">
               <span class="menu-icon">
-                <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-alert"></i>
               </span>
               <span class="menu-title" style="color: white;">Incidencias</span>
             </a>
           </li>
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
-            <a class="nav-link" href="#"> <!-- Cambiar href de acuerdo a lo necesario -->
+            <a class="nav-link" href="#">
               <span class="menu-icon">
-                <i class="mdi mdi-logout"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
+                <i class="mdi mdi-logout"></i>
               </span>
               <span class="menu-title" style="color: white;">Cerrar sesión</span>
             </a>
@@ -101,15 +140,11 @@
       <div class="container-fluid page-body-wrapper">
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
-          
-          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #000f22"> <!--Cambiar al color mas oscuro-->
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch" style ="background-color: #000f22">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span class="mdi mdi-menu" style="color: white;"></span> <!--Cambiar el color de las 3 rayas de acuerdo a lo necesario (a negro en todo caso)-->
+              <span class="mdi mdi-menu" style="color: white;"></span>
             </button>
-            
             <ul class="navbar-nav navbar-nav-right">
-              
-        
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
@@ -117,11 +152,9 @@
                       <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Manuel Yarleque</h2>
                       <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Vecino sanmiguelino</h5>
                     </div>
-                    <img class="img-xs rounded-circle" src="LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
-                    
+                    <img class="img-xs rounded-circle" src="LogoSM.png" alt="" style ="height: 50px; width: 100%;">
                   </div>
                 </a>
-                
               </li>
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -131,7 +164,7 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper" style="background-color: #d6e9ff;"> <!--Cambiar al color mas claro-->
+          <div class="content-wrapper" style="background-color: #d6e9ff;">
             <!--CONTENIDO-->
             <h1 style="font-weight: bold; color: black;">Solicitud a coordinador(a):</h1>
             <div class="container_sol" style="margin-top: -50px;">
@@ -149,11 +182,23 @@
                       <button class="beautiful-button" onclick="mostrarAlerta()">Enviar solicitud</button>
                     </div>
                     <div id="cards-container" class="cards-container">
-                      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                      <div class="cards-wrapper" id="cards-wrapper">
-                        <!-- Las cartas se insertarán aquí dinámicamente -->
+                      <button id="prev" class="nav-button prev hidden" onclick="changeSlide(-1)">&#10094;</button>
+                      <div class="card" id="card1">
+                        <img src="deportes1.png" alt="Deportes">
+                        <h2>Organiza Eventos Deportivos</h2>
+                        <p>En esta área de deportes, tendrás la oportunidad de organizar diversos eventos deportivos que fomenten la participación y el espíritu de equipo.</p>
                       </div>
-                      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                      <div class="card" id="card2">
+                        <img src="deportes2.jpg" alt="Profesores de Deportes">
+                        <h2>Elige a tus Profesores</h2>
+                        <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, con toda la voluntad de atender a las necesidades y preferencias de los participantes.</p>
+                      </div>
+                      <div class="card" id="card3">
+                        <img src="imagen_deportes.jpg" alt="Ejemplos de Deportes">
+                        <h2>Inspírate en Ejemplos</h2>
+                        <p>Algunos ejemplos de actividades que puedes organizar incluyen torneos de fútbol, clases de yoga en el parque, y competiciones de atletismo, entre otros.</p>
+                      </div>
+                      <button id="next" class="nav-button next hidden" onclick="changeSlide(1)">&#10095;</button>
                     </div>
                   </div>
                 </div>
@@ -167,19 +212,12 @@
       <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
-    <!-- plugins:js -->
     <script src="../../../assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
     <script src="../../../assets/js/off-canvas.js"></script>
     <script src="../../../assets/js/hoverable-collapse.js"></script>
     <script src="../../../assets/js/misc.js"></script>
     <script src="../../../assets/js/settings.js"></script>
     <script src="../../../assets/js/todolist.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
     <script>
       function mostrarPopupCerrarSesion() {
         Swal.fire({
@@ -193,10 +231,10 @@
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+                window.location.href = "../LOGIN/login.html";
             }
         });
-    }
+      }
     </script>
     <script>
       function mostrarAlerta() {
@@ -211,14 +249,12 @@
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                // Aquí iría el código para enviar la solicitud
                 Swal.fire(
                     '¡Solicitud enviada!',
                     'La solicitud ha sido enviada correctamente.',
                     'success'
                 );
             } else {
-                // El usuario ha cancelado la acción
                 Swal.fire(
                     'Solicitud cancelada',
                     '',
@@ -229,79 +265,77 @@
       }
     </script>
     <script>
-      function showImage(opcion) {
-        var imagenContainer = document.getElementById("imagen-container");
-        if (opcion === "deportes") {
-          imagenContainer.innerHTML = '<img src="imagen_deportes.jpg" alt="Deportes">';
-        } else if (opcion === "cultura") {
-          imagenContainer.innerHTML = '<img src="imagen_cultura.jpg" alt="Cultura">';
-        }
-      }
-    </script>
+      const cards = {
+        deportes: [
+          {
+            img: 'deportes1.png',
+            title: 'Organiza Eventos Deportivos',
+            desc: 'En esta área de deportes, tendrás la oportunidad de organizar diversos eventos deportivos que fomenten la participación y el espíritu de equipo.'
+          },
+          {
+            img: 'deportes2.jpg',
+            title: 'Elige a tus Profesores',
+            desc: 'Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, con toda la voluntad de atender a las necesidades y preferencias de los participantes.'
+          },
+          {
+            img: 'imagen_deportes.jpg',
+            title: 'Inspírate en Ejemplos',
+            desc: 'Algunos ejemplos de actividades que puedes organizar incluyen torneos de fútbol, clases de yoga en el parque, y competiciones de atletismo, entre otros.'
+          }
+        ],
+        cultura: [
+          {
+            img: 'imagen_cultura.jpg',
+            title: 'Organiza Eventos Culturales',
+            desc: 'En esta área de cultura, tendrás la oportunidad de organizar eventos culturales que promuevan la creatividad y la apreciación artística.'
+          },
+          {
+            img: 'cultura2.jpg',
+            title: 'Elige a tus Profesores',
+            desc: 'Contarás con la opción de seleccionar profesores que puedan impartir diferentes disciplinas artísticas, con toda la voluntad de atender a las necesidades y preferencias de los participantes.'
+          },
+          {
+            img: 'cultura3.jpg',
+            title: 'Inspírate en Ejemplos',
+            desc: 'Algunos ejemplos de actividades que puedes organizar incluyen exposiciones de arte, talleres de teatro, y clases de música, entre otros.'
+          }
+        ]
+      };
 
-    <script>
       let currentSlide = 0;
 
       function showCards(opcion) {
-        const cardsWrapper = document.getElementById('cards-wrapper');
-        let cardsHTML = '';
-        
-        if (opcion === 'deportes') {
-          cardsHTML = `
-          <div class="card">
-            <img src="deportes1.png" alt="Deportes">
-            <h2>Organiza Eventos Deportivos</h2>
-            <p>En esta área de deportes, tendrás la oportunidad de organizar diversos eventos deportivos que fomenten la participación y el espíritu de equipo.</p>
-          </div>
-          <div class="card">
-            <img src="deportes2.jpg" alt="Profesores de Deportes">
-            <h2>Elige a tus Profesores</h2>
-            <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes deportes o actividades al aire libre, con toda la voluntad de atender a las necesidades y preferencias de los participantes.</p>
-          </div>
-          <div class="card">
-            <img src="imagen_deportes.jpg" alt="Ejemplos de Deportes">
-            <h2>Inspírate en Ejemplos</h2>
-            <p>Algunos ejemplos de actividades que puedes organizar incluyen torneos de fútbol, clases de yoga en el parque, y competiciones de atletismo, entre otros.</p>
-          </div>
-          `;
-        } else if (opcion === 'cultura') {
-          cardsHTML = `
-          <div class="card">
-            <img src="imagen_cultura.jpg" alt="Cultura 1">
-            <h2>Organiza Eventos Culturales</h2>
-            <p>En esta área de cultura, tendrás la oportunidad de organizar eventos culturales que promuevan la creatividad y la apreciación artística. </p>
-          </div>
-          <div class="card">
-            <img src="cultura2.jpg" alt="Cultura 2">
-            <h2>Cultura 2</h2>
-            <p>Contarás con la opción de seleccionar profesores que puedan impartir diferentes disciplinas artísticas, con toda la voluntad de atender a las necesidades y preferencias de los participantes.</p>
-          </div>
-          <div class="card">
-            <img src="cultura3.jpg" alt="Cultura 3">
-            <h2>Inspírate en Ejemplos</h2>
-            <p>Algunos ejemplos de actividades que puedes organizar incluyen exposiciones de arte, talleres de teatro, y clases de música, entre otros.</p>
-          </div>
-          `;
-        }
-        
-        cardsWrapper.innerHTML = cardsHTML;
+        const cardElements = document.querySelectorAll('.card');
+        cardElements.forEach(card => card.classList.remove('active'));
+
         currentSlide = 0;
-        updateSlide();
+
+        const selectedCards = cards[opcion];
+        cardElements.forEach((card, index) => {
+          card.querySelector('img').src = selectedCards[index].img;
+          card.querySelector('h2').textContent = selectedCards[index].title;
+          card.querySelector('p').textContent = selectedCards[index].desc;
+          card.classList.toggle('active', index === currentSlide);
+        });
+
+        updateNavigation();
       }
 
       function changeSlide(direction) {
-        const cardsWrapper = document.getElementById('cards-wrapper');
-        const totalSlides = cardsWrapper.children.length;
-        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-        updateSlide();
+        const cardElements = document.querySelectorAll('.card');
+        cardElements[currentSlide].classList.remove('active');
+
+        currentSlide += direction;
+        currentSlide = Math.max(0, Math.min(currentSlide, cardElements.length - 1));
+
+        cardElements[currentSlide].classList.add('active');
+        updateNavigation();
       }
 
-      function updateSlide() {
-        const cardsWrapper = document.getElementById('cards-wrapper');
-        const cardWidth = cardsWrapper.children[0].offsetWidth;
-        cardsWrapper.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+      function updateNavigation() {
+        document.getElementById('prev').classList.toggle('hidden', currentSlide === 0);
+        document.getElementById('next').classList.toggle('hidden', currentSlide === document.querySelectorAll('.card').length - 1);
       }
     </script>
-    <!-- End custom js for this page -->
   </body>
 </html>
