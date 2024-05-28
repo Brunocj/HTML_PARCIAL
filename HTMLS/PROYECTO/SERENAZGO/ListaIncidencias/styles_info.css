@@ -2,12 +2,12 @@
 /* ---------------------------------------------------------- */
 .container {
   margin-top: 50px; /* Ajusta el margen superior según sea necesario */
-  align-items: center; /* Centra verticalmente el contenido */
+  
   background-color: #fffff6; /* Cambia el color de fondo del contenedor */
   display: flex;
   border-radius: 20px;
   flex-direction: column;
-  justify-content: center; /* Centra verticalmente el contenido */
+  
   height: 50vh; /* Aumenta la altura del contenedor */
   width: 100%; /* El contenedor ocupa todo el ancho disponible */
 }
@@ -24,6 +24,9 @@
   height: 700px;
 }
 
+h4 {
+  text-align: justify;
+}
 .container .info {
   
   background-color: #ffffff; /* Cambia el color de fondo de la tarjeta */

@@ -92,7 +92,14 @@
               <span class="menu-title" style="color: white;">Lista de vecinos</span>
             </a>
           </li>
-          
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../ListaPasadas/tabla_pasadas.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-format-list-bulleted"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Lista de incidencias <br> pasadas</span>
+            </a>
+          </li>
           
           <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
           
@@ -222,7 +229,7 @@
       }
       function cancelar() {
             Swal.fire({
-                title: "¿Estás seguro de que deseas cancelar la clasificación?",
+                title: "¿Estás seguro de que deseas cancelar la actualización?",
                 text: "Una vez cancelado, no se guardarán los cambios en el sistema",
                 icon: "warning",
                 showCancelButton: true,
@@ -233,7 +240,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: "Se canceló la clasificación",
+                        title: "Se canceló la actualización",
                         icon: "success"
                     }).then(() => {
                         window.location.href ="tabla_incidencias.html";
@@ -257,11 +264,9 @@
                 confirmButtonText: "Sí, clasificar"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        
-                    }).then(() => {
+                    
                         window.location.href = "clasifica.html";
-                    });
+                   
                 }
             });
 

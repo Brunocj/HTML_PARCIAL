@@ -92,7 +92,14 @@
               <span class="menu-title" style="color: white;">Lista de vecinos</span>
             </a>
           </li>
-          
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../ListaPasadas/tabla_pasadas.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-format-list-bulleted"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Lista de incidencias <br> pasadas</span>
+            </a>
+          </li>
           
           <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
           
@@ -158,7 +165,7 @@
             <!-- Radios de categorías -->
             
           <div class="info">
-            <h3 style="text-align: center;">Se ha ocasionado un robo al frente de mi domicilio, cerca de la av. Universitaria. Para más información, contactar al 932442712<h3>
+            <h4 style="text-align: justify;">Se ha ocasionado un robo al frente de mi domicilio, cerca de la av. Universitaria. Para más información, contactar al 932442712<h3>
             
           </div>
         
@@ -260,11 +267,9 @@
                 confirmButtonText: "Sí, finalizar"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        
-                    }).then(() => {
+                    
                         window.location.href = "../ListaPasadas/tabla_pasadas.html";
-                    });
+                    
                 }
             });
 

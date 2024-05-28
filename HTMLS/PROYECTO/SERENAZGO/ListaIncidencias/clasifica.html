@@ -93,7 +93,14 @@
             </a>
           </li>
           
-          
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../ListaPasadas/tabla_pasadas.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-format-list-bulleted"></i>
+              </span>
+              <span class="menu-title" style="color: white;">Lista de incidencias <br> pasadas</span>
+            </a>
+          </li>
           <!-- Codigo para un item de la barra lateral que SI tiene sublista -->
           
           <li class="nav-item menu-items" onclick="return mostrarPopupCerrarSesion();">
@@ -248,7 +255,7 @@
                 confirmButtonColor: "#00913f",
                 cancelButtonColor: "#d33",
                 cancelButtonText: "Cancelar",
-                confirmButtonText: "Si"
+                confirmButtonText: "Sí"
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
@@ -273,7 +280,7 @@
                 confirmButtonColor: "#00913f",
                 cancelButtonColor: "#d33",
                 cancelButtonText: "Cancelar",
-                confirmButtonText: "Si, clasificar"
+                confirmButtonText: "Sí, clasificar"
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
