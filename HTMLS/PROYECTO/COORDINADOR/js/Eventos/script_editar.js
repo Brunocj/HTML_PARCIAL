@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("profesores-link")
     .addEventListener("click", function (event) {
       event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
-      window.location.href = "tablaDocentes/tabla.html"; // Cambiar la ubicación de la ventana al enlace deseado
+      window.location.href = "../../html/Eventos/tabla_docentes.html"; // Cambiar la ubicación de la ventana al enlace deseado
     });
 });
 
