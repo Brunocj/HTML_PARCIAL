@@ -55,6 +55,44 @@ function mostrarPopupCerrarSesion() {
   });
 }
 
+function mostrarOpcionMaterial() {
+  var opcionMaterial = document.getElementById('opcion-material');
+  var mensajeNoMaterial = document.getElementById('mensaje-no-material');
+  var select = document.getElementById('necesita-material');
+
+  if (select.value === 'si') {
+      opcionMaterial.classList.remove('hidden');
+      mensajeNoMaterial.classList.add('hidden');
+  } else if (select.value === 'no') {
+      opcionMaterial.classList.add('hidden');
+      mensajeNoMaterial.classList.remove('hidden');
+  } else {
+      opcionMaterial.classList.add('hidden');
+      mensajeNoMaterial.classList.add('hidden');
+  }
+}
+
+function agregarMaterial() {
+  var lista = document.getElementById('lista-materiales');
+  var nuevoMaterial = document.getElementById('nuevo-material').value;
+  if (nuevoMaterial.trim() !== "") {
+      var li = document.createElement('li');
+      li.className = 'material-item';
+      li.innerHTML = `
+          <span>${nuevoMaterial}</span>
+          <button class="remove-btn" onclick="eliminarMaterial(this)">X</button>
+      `;
+      lista.appendChild(li);
+      document.getElementById('nuevo-material').value = ""; // Clear input field
+  }
+}
+
+function eliminarMaterial(elemento) {
+  var li = elemento.parentElement;
+  li.remove();
+}
+
+
 function borrarEvento() {
   Swal.fire({
     title: "¿Estás seguro de que deseas eliminar el evento?",
@@ -69,7 +107,7 @@ function borrarEvento() {
       // Almacenar un indicador en el localStorage
       localStorage.setItem("eventoEliminado", "true");
       // Redireccionar a evento.html
-      window.location.href = "eventos.html";
+      window.location.href = "../../html/Eventos/eventos.html";
     }
   });
 }
@@ -314,5 +352,5 @@ function AmpliarVacantesPopUp() {
 
 function verInscritos() {
   // Redirigir al usuario a index.html
-  window.location.href = "../tablainscritos/tabla.html";
+  window.location.href = "../../html/Eventos/tabla_inscritos.html";
 }

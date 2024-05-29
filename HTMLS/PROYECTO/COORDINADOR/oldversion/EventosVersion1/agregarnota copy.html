@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales del Evento</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        #lista-materiales {
+            list-style-type: disc;
+            padding-left: 20px; /* Ensure list indentation */
+        }
+        .material-item {
+            display: list-item; /* Ensure list-item display to show bullets */
+            list-style-position: inside; /* Ensures bullets are inside the list item */
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .remove-btn {
+            margin-left: 10px;
+            color: red;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-6">
+        <div class="custom-container rounded-3">
+            <h4 class="mb-4">Materiales <i class="fas fa-pencil-alt edit-icon"></i></h4>
+            <div>
+                <p>¿Se necesita material?</p>
+                <select id="necesita-material" name="necesita-material" onchange="mostrarOpcionMaterial()">
+                    <option value="" selected>-- Seleccione una opción --</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <br>
+            <div id="opcion-material" class="hidden">
+              <input type="text" id="nuevo-material" placeholder="Agregar material">
+              <button type="button" onclick="agregarMaterial()">Agregar</button>
+                <h4 class="mb-4">Lista de Materiales <i class="fas fa-pencil-alt edit-icon"></i></h4>
+                <ul id="lista-materiales"></ul> 
+            </div>
+
+            <p id="mensaje-no-material" class="hidden">No se requiere material.</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarOpcionMaterial() {
+            var opcionMaterial = document.getElementById('opcion-material');
+            var mensajeNoMaterial = document.getElementById('mensaje-no-material');
+            var select = document.getElementById('necesita-material');
+
+            if (select.value === 'si') {
+                opcionMaterial.classList.remove('hidden');
+                mensajeNoMaterial.classList.add('hidden');
+            } else if (select.value === 'no') {
+                opcionMaterial.classList.add('hidden');
+                mensajeNoMaterial.classList.remove('hidden');
+            } else {
+                opcionMaterial.classList.add('hidden');
+                mensajeNoMaterial.classList.add('hidden');
+            }
+        }
+
+        function agregarMaterial() {
+            var lista = document.getElementById('lista-materiales');
+            var nuevoMaterial = document.getElementById('nuevo-material').value;
+            if (nuevoMaterial.trim() !== "") {
+                var li = document.createElement('li');
+                li.className = 'material-item';
+                li.innerHTML = `
+                    <span>${nuevoMaterial}</span>
+                    <button class="remove-btn" onclick="eliminarMaterial(this)">X</button>
+                `;
+                lista.appendChild(li);
+                document.getElementById('nuevo-material').value = ""; // Clear input field
+            }
+        }
+
+        function eliminarMaterial(elemento) {
+            var li = elemento.parentElement;
+            li.remove();
+        }
+    </script>
+</body>
+</html>

@@ -66,7 +66,7 @@ color: black; /* Color del texto */
 }
 #btn-vacantes{
   font-weight: bold; /* Texto en negrita */
-  width: 300px; /* Ancho personalizado */
+  width: 250px; /* Ancho personalizado */
   height: 50px; /* Alto personalizado */
   font-size: 24px;
   background-color: green;
@@ -371,4 +371,38 @@ margin-right: 5px;
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+textarea {
+  font-size: 16px;
+  padding: 5px;
+  width: 100%; /* El textarea ocupa todo el ancho disponible */
+  max-width: 100%; /* Limita el ancho al 100% del contenedor padre */
+  box-sizing: border-box;
+  display: block;
+  word-wrap: break-word;
+  resize: none; /* Deshabilita el redimensionamiento manual */
+  overflow: hidden; /* Oculta el scroll */
+}
+.hidden {
+  display: none;
+}
+#lista-materiales {
+  list-style-type: disc;
+  padding-left: 20px; /* Ensure list indentation */
+  color: #000;
+}
+.material-item {
+  display: list-item; /* Ensure list-item display to show bullets */
+  list-style-position: inside; /* Ensures bullets are inside the list item */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.remove-btn {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
 }

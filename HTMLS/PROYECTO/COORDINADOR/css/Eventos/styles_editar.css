@@ -222,3 +222,37 @@
     margin-bottom: 10px;
     align-items: center;
   }
+  textarea {
+    font-size: 16px;
+    padding: 5px;
+    width: 100%; /* El textarea ocupa todo el ancho disponible */
+    max-width: 100%; /* Limita el ancho al 100% del contenedor padre */
+    box-sizing: border-box;
+    display: block;
+    word-wrap: break-word;
+    resize: none; /* Deshabilita el redimensionamiento manual */
+    overflow: hidden; /* Oculta el scroll */
+}
+
+.hidden {
+  display: none;
+}
+#lista-materiales {
+  list-style-type: disc;
+  padding-left: 20px; /* Ensure list indentation */
+}
+.material-item {
+  display: list-item; /* Ensure list-item display to show bullets */
+  list-style-position: inside; /* Ensures bullets are inside the list item */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.remove-btn {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+}

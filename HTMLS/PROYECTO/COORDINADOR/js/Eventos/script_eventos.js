@@ -74,3 +74,50 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
+ 
+  document.addEventListener("DOMContentLoaded", function() {
+    const pageButtons = document.querySelectorAll('.page-button');
+    const contents = document.querySelectorAll('.page-content');
+    let currentPage = 1;
+    const totalPages = contents.length;
+
+    function updatePage() {
+        // Mostrar/ocultar contenido
+        contents.forEach(content => content.classList.remove('active'));
+        document.getElementById(`page${currentPage}`).classList.add('active');
+
+        // Actualizar botones de paginación
+        pageButtons.forEach(button => button.parentElement.classList.remove('active'));
+        document.querySelector(`.page-button[data-page="${currentPage}"]`).parentElement.classList.add('active');
+
+        // Habilitar/deshabilitar botones de Anterior y Siguiente
+        document.getElementById('previousPage').classList.toggle('disabled', currentPage === 1);
+        document.getElementById('nextPage').classList.toggle('disabled', currentPage === totalPages);
+    }
+
+    pageButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            currentPage = parseInt(this.getAttribute('data-page'));
+            updatePage();
+        });
+    });
+
+    document.getElementById('previousPage').addEventListener('click', function(event) {
+        event.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            updatePage();
+        }
+    });
+
+    document.getElementById('nextPage').addEventListener('click', function(event) {
+        event.preventDefault();
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePage();
+        }
+    });
+
+    updatePage();
+});

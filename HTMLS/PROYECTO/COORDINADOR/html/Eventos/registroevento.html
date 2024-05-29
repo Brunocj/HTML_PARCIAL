@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Página Principal Coordinador</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href=../../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../../../assets/vendors/css/vendor.bundle.base.css">
 
     <!-- jQuery UI -->
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../../../../assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../../LogoSM.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
@@ -29,8 +30,8 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar" style ="background-color: #000f22;">  <!--Cambiar al color mas oscuro-->
         
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
-          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
-          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
+          <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;"><strong>Menú</strong> </h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;"></h3>
         </div>
         
         
@@ -38,6 +39,7 @@
           
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
           <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
+            
             <a class="nav-link" href="../PaginaPrincipal/pagina_principal_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-home"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
@@ -107,8 +109,8 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
                     <div class="Header-nav-item">
-                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;">Adrian López</h2>
-                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;">Coordinador de Cultura</h5>
+                      <h2 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 23px; font-weight:500; cursor: default;"><strong>Adrian López</strong> </h2>
+                      <h5 class="mb-0 d-none d-sm-block navbar-profile-name" style ="margin-right: 10px; font-size: 15px; font-weight:500; cursor: default;"><strong>Coordinador de Cultura</strong> </h5>
                     </div>
                     <img class="img-xs rounded-circle" src="../../../LogoSM.png" alt="" style ="height: 50px; width: 100%;"> <!--Cambiar la ubicacion para el logo de san miguel (no anden copiando y pegando la imagen a sus carpetas o bala)-->
                     
@@ -139,15 +141,19 @@
                 </div>
                 <div class="col-md-6">
                   <div class="custom-container rounded-3" id="fechas">
-                    <div class="input-box" id="nombre-seleccionado">
-                      <input type="text" class="nombreEvento" placeholder="Añadir el nombre del evento" style ="background-color: #daf5f7;">
-                      <i class="fas fa-pencil-alt edit-icon"></i>
-                    </div>
-                    <p><strong>Fecha:</strong> <span id="fecha-seleccionada">DD de MM de AA</span> <i class="fas fa-pencil-alt edit-icon" onclick="enableEditMode3('fecha-seleccionada')"></i></p>
-                    <p><strong>Hora:</strong> <span id="hora-seleccionada" onclick="enableEditMode3('hora-seleccionada')">HH:MM a HH:MM</span> <i class="fas fa-pencil-alt edit-icon" onclick="enableEditMode3('hora-seleccionada')"></i></p>
-                    <p><strong>Lugar:</strong> <span id="lugar-seleccionado" onclick="enableEditMode3('lugar-seleccionado')">Añade el lugar...</span> <i class="fas fa-pencil-alt edit-icon" onclick="enableEditMode3('lugar-seleccionado')"></i></p>
-                    <p><strong>Recurrencia:</strong> <span id="recurrencia-seleccionada" onclick="enableEditMode3('recurrencia-seleccionada')">Añade la recurrencia...</span> <i class="fas fa-pencil-alt edit-icon" onclick="enableEditMode3('recurrencia-seleccionada')"></i></p>
-                    
+                    <h4 class="mb-4 center-text"><span id="nombre-seleccionado"><input type="text" id="nombre" name="texto" value="[Nombre del evento]"></span><i class="fas fa-pencil-alt edit-icon"></i></h4>
+                        <p><strong>Fecha:</strong> <span><input type="date" id="fecha" name="fecha" value="AAAA-MM-DD"></span> <i class="fas fa-pencil-alt edit-icon"></i></p>
+                        <p><strong>Hora:</strong> <span><input type="time" id="hora" name="hora" value="mm:hh"></span> <i class="fas fa-pencil-alt edit-icon"></i></p>
+                        <p><strong>Lugar:</strong> <span><input type="text" id="lugar" name="texto" value="[Lugar establecido]"></span> <i class="fas fa-pencil-alt edit-icon"></i></p>
+                        <p><strong>Recurrencia:</strong> <span>
+                            <select id="recurrencia" name="recurrencia">
+                                <option value="seleccionaropcion" selected>--Selecionar opción--</option>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            </span> 
+                            <i class="fas fa-pencil-alt edit-icon"></i>
+                        </p>
                       <button type="button" class="btn btn-primary custom-btn" id="btn-vacantes" onclick="VacantesPopUp()">Asignar Vacantes</button>
                       <div id="vacantesAsignadasContainer" style="display: inline-block; margin-left: 10px;"></div>
                     </div>
@@ -155,10 +161,28 @@
                 </div>
                 <div class="col-md-6">
                   <div class="custom-container rounded-3" id="descripcion">
-                    <h4 class="mb-4">Descripción del Evento <i class="fas fa-pencil-alt edit-icon" onclick="enableEditMode('descripcion')"></i></h4>
-                    <p contenteditable="false">Agrega la descripción del evento aquí</p>
-                    <h4 class="mb-4">Materiales <i class="fas fa-pencil-alt edit-icon" onclick="enableEditMode('materiales')"></i></h4>
-                    <p contenteditable="false">Especifica que materiales usarás aquí</p>
+                    <h4 class="mb-4">Descripción del Evento <i class="fas fa-pencil-alt edit-icon"></i></h4>
+                    <textarea id="descripcion" name="texto">[Ingrese la descripción aquí]</textarea>
+                    <h4 class="mb-4">Materiales <i class="fas fa-pencil-alt edit-icon"></i></h4>
+                    <div>
+                        <p>¿Se necesita material?</p>
+                        <select id="necesita-material" name="necesita-material" onchange="mostrarOpcionMaterial()">
+                            <option value="" selected>-- Seleccione una opción --</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="opcion-material" class="hidden">
+                      <input type="text" id="nuevo-material" placeholder="Agregar material">
+                      <button type="button" onclick="agregarMaterial()">Agregar</button>
+                      <br>
+                      <br>
+                        <h4 class="mb-4">Lista de Materiales <i class="fas fa-pencil-alt edit-icon"></i></h4>
+                        <ul id="lista-materiales"></ul> 
+                    </div>
+
+                    <p id="mensaje-no-material" class="hidden">No se requiere material.</p>
                     <h4 class="mb-4" id="profesores-link">
                       <a href="#">Seleccionar profesor <i class="fas fa-external-link-alt"></i></a>
                    </h4>
@@ -202,7 +226,7 @@
     <script src="../../../../../assets/js/hoverable-collapse.js"></script>
     <script src="../../../../../assets/js/misc.js"></script>
     <script src="../../../../../assets/js/settings.js"></script>
-    <script src="../../../../assets/js/todolist.js"></script>
+    <script src="../../../../../assets/js/todolist.js"></script>
     <script src="../../../../../assets/js/paginas_princpales.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->

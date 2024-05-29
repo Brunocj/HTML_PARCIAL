@@ -4,9 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Solicitud</title>
+    <title>Pagina en blanco</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../../css/Incidencias/styles_registro.css">
+    <link rel="stylesheet" href="../../css/Eventos/styles_tabla_inscritos.css">
     <link rel="stylesheet" href="../../../../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../../../assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
@@ -16,9 +16,8 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../../../../assets/css/style.css">
-    
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../../LogoSM.png" />
+    <link rel="shortcut icon" href="../../../LogoSM.png" /> <!--Cambiar la ubicacion del logo de la pagina aca tmb-->
     <!--JS para los popups-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
@@ -29,13 +28,13 @@
         
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style ="background-color: #000f22;">
           <h3 class="sidebar-brand brand-logo" style ="color:white; font-weight: 200px; cursor: default;">Menú</h3>
-          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;">M</h3>
+          <h3 class="sidebar-brand brand-logo-mini" style ="color:white; font-weight: 200px; cursor: default;"></h3>
         </div>
         
         
         <ul class="nav">
           <!-- Codigo para un item de la barra lateral que no tiene sublista -->
-          <li class="nav-item menu-items "> <!-- la clase "active" solo se usa para la vista que está activa -->
+          <li class="nav-item menu-items"> <!-- la clase "active" solo se usa para la vista que está activa -->
             
             <a class="nav-link" href="../PaginaPrincipal/pagina_principal_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
@@ -63,7 +62,7 @@
               <span class="menu-title" style="color: white;">Correo</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          <li class="nav-item menu-items active">
             <a class="nav-link" href="../Eventos/eventos.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-earth"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
@@ -71,7 +70,7 @@
               <span class="menu-title" style="color: white;">Eventos</span>
             </a>
           </li>
-          <li class="nav-item menu-items active">
+          <li class="nav-item menu-items ">
             <a class="nav-link" href="../Incidencias/incidencia_coordinador.html"> <!-- Cambiar href de acuerdo a lo necesario -->
               <span class="menu-icon">
                 <i class="mdi mdi-alert"></i> <!-- Cambiar icono de acuerdo a lo necesario -->
@@ -103,7 +102,7 @@
             
             <ul class="navbar-nav navbar-nav-right">
               
-        
+              
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
@@ -126,58 +125,87 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper" style ="background-color: #bdf1f5;"> <!--Cambiar al color mas claro-->
-          <!--CONTENIDO-->
-          <div class="container">
-            <div class="card">
-              <div class = "wrapper"id="formContent">
-                <!-- Tabs Titles -->
-                <center><h2 class="active" style="color: black;">Registro de incidencia</h2></center>                
-                <!-- Icon -->
-                <!-- Login Form -->
-                <form>
-                  <div class="inputs">
-                    <input type="text" id="nombre" class="input-field" placeholder="Nombre de la incidencia">
-                    <input type="text" id="lugar" class="input-field" placeholder="Lugar exacto">
-                    <input type="text" id="ref" class="input-field" placeholder="Referencia">
-                    <select id="tipo" class="input-field">
-                      <option value="" disabled selected>Tipo de incidencia</option>
-                      <option value="Hurto">Hurto</option>
-                      <option value="Discriminación">Discriminación</option>
-                      <option value="Vandalismo">Vandalismo</option>
-                      <option value="Homicidio">Homicidio</option>
-                      <option value="Secuestro">Secuestro</option>
-                      <option value="Acoso">Acoso</option>
-                    </select>
-                    <input type="text" id="contacto" class="input-field" placeholder="Contacto (opcional)">
-                    <select id="ambulanciaSN" class="input-field">
-                      <option value="" disabled selected>Requiere ambulancia (s/n)?</option>
-                      <option value="Sí">Sí</option>
-                      <option value="No">No</option>
-                    </select>
-                    <div class="formImg">
-                      <form action="subir_foto.php" method="post" enctype="multipart/form-data">
-                        <label for="foto">Selecciona una foto:</label>
-                        <div class="foto-flex" >
-                          <input type="file" id="foto" name="foto" accept="image/*">
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="buttons">
-                    <input type="submit" class="green" value="Registrar incidencia" onclick="return Confirmacion();">
-                    <input type="submit" class="red" value="Cancelar" onclick="return Cancelar();">
-                  </div>
-                </form> 
-                
+            <!--CONTENIDO-->
+            <div style="display: flex; justify-content: space-between;">
+              <div style="display: flex; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; margin-bottom: 20px">
+                  <h2 class="tabla-title" style ="color:#000f22;">Lista de Inscritos</h2>  <!--Cambiar el titulo de la tabla-->
+                   
+                </div>
+              </div>
             </div>
-
+            <table id="miTabla" class="table" style="margin-bottom:15px;">
+              <thead style="background-color: #e0e9ff;"> <!--Cambiar al color de fondo (claro) de la pagina, pero un poco mas oscuro-->
+                <tr style="text-align: center; font-weight:800;">
+                  <th style="width: 100px;">Turno</th>
+                  <th >Nombre</th>
+                  <th style="width: 100px;">Ajustes</th>
+                  
+                </tr>
+              </thead>
+              <tbody style="text-align: center;">
+                <tr style="text-align: center;">
+                  <td><a>01</a></td>
+                  <td><a>Tacuri Flores, Brandon Rafael</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+                </tr>
+                <tr style="text-align: center;">
+                  <td><a>02</a></td>
+                  <td><a>Luján Carrión, Jesús Andrés</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+                </tr>
+                <tr style="text-align: center;">
+                  <td><a>03</a></td>
+                  <td><a>Vilchez Campos, Carlos Eduardo</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+                </tr>
+                <tr style="text-align: center;">
+                  <td><a>04</a></td>
+                  <td><a>Domínguez Alvarado, Christian</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+                </tr>
+                <tr>
+                  <td><a>05</a></td>
+                  <td><a>Camarena Jáuregui, Bruno Imanol</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+              </tr>
+              <tr>
+                  <td><a>06</a></td>
+                  <td><a>Garay Cruz, Eduardo Daniel</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+              </tr>
+              <tr>
+                  <td><a>07</a></td>
+                  <td><a>Calderón Rodríguez, José Ricardo</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+              </tr>
+              <tr>
+                  <td><a>08</a></td>
+                  <td><a>Bustamante Melo, Pedro Miguel</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+              </tr>
+              <tr>
+                  <td><a>09</a></td>
+                  <td><a>Lopez Pascual, Álvaro Adrián</a></td>
+                  <td><a href ="#" onclick="return Eliminacion();" class ="mdi mdi-delete" style ="color: #6c7293;"></a></td>
+              </tr>
+              </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <div class="button-container">
+              <!-- Botón con enlace "#" -->
+              <button class="button" onclick="goBack()">Regresar</button>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <!-- partial -->
         </div>
+        
         <!-- main-panel ends -->
       </div>
+      
       <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
@@ -194,12 +222,27 @@
     <script src="../../../../../assets/js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="../../js/Incidencias/script_cerrar_sesion.js"></script>
-    <!-- End custom js for this page -->
+    <script>
+      function mostrarPopupCerrarSesion() {
+        Swal.fire({
+            title: 'Cerrar sesión',
+            text: '¿Estás seguro de que deseas cerrar sesión?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#00913f',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, cerrar sesión'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "../../../LOGIN/login.html"; //Cambiar la ubicacion del login de acuerdo a lo necesario
+            }
+        });
+    }
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src ="../../js/Incidencias/script_registro.js"></script>
+    <script src = "../../js/Eventos/script_tabla_incsritos.js"></script>
     
+    <!-- End custom js for this page -->
   </body>
 </html>
-

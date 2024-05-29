@@ -226,3 +226,12 @@
   #contenedor{
       margin-bottom: 120px;
   }
+
+
+#notaEvento {
+  width: 100%;
+  height: 100px; /* Altura inicial */
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none; /* Evita el redimensionamiento manual */
+}
