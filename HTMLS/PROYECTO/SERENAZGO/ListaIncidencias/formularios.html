@@ -233,3 +233,56 @@
     <!-- End custom js for this page -->
   </body>
 </html>
+
+
+<script>
+  function cancelar() {
+            Swal.fire({
+                title: "¿Estás seguro de que deseas cancelar?",
+                text: "Una vez cancelado, no se guardarán los cambios en el sistema",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#00913f",
+                cancelButtonColor: "#d33",
+                cancelButtonText: "Cancelar",
+                confirmButtonText: "Sí"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Se canceló la el procesamiento con éxito",
+                        icon: "success"
+                    }).then(() => {
+                        window.location.href ="tabla_incidencias.html";
+                    });
+                }
+            });
+
+            // Evitar que el formulario se envíe automáticamente
+            return false;
+        }
+
+        function aceptar() {
+            Swal.fire({
+                title: "¿Estás seguro de que deseas confirmar?",
+                text: "Una vez inicie el procedimiento, el estado de la incidencia cambiará y se solicitarán las autoridades seleccionadas",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#00913f",
+                cancelButtonColor: "#d33",
+                cancelButtonText: "Cancelar",
+                confirmButtonText: "Sí, confirmar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Se inició el proceso de esta incidencia",
+                        icon: "success"
+                    }).then(() => {
+                        window.location.href = "tabla_incidencias.html";
+                    });
+                }
+            });
+
+            // Evitar que el formulario se envíe automáticamente
+            return false;
+        }
+</script>
