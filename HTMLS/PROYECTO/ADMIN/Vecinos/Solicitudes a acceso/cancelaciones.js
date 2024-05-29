@@ -15,7 +15,7 @@ function CancelarPagPrincipal(){
                 text: "Se ha cancelado satisfactoriamente",
                 icon: "success"
             }).then(() => {
-                window.location.href = "../../pag_principal.html ";
+                window.location.href = "../../pagina_principal_admin.html ";
             });
         }
     });
