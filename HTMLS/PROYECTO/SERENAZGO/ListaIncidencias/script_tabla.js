@@ -28,12 +28,13 @@ function Confirmacion() {
 function Eliminacion() {
   Swal.fire({
     title: "Estás seguro?",
-    text: "Una vez eliminado, la información asociada al personal será permanentemente eliminada del sistema",
+    text: "Una vez eliminado, la información será permanentemente eliminada del sistema",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#00913f",
     cancelButtonColor: "#d33",
     confirmButtonText: "Si, eliminar",
+    cancelButtonText: 'Cancelar'
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({

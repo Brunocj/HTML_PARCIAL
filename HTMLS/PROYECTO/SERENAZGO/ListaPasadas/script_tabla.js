@@ -34,6 +34,7 @@ function Eliminacion() {
     confirmButtonColor: "#00913f",
     cancelButtonColor: "#d33",
     confirmButtonText: "Si, eliminar",
+    cancelButtonText: 'Cancelar'
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({
